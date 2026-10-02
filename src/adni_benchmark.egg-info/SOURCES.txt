@@ -2,6 +2,7 @@ README.md
 pyproject.toml
 src/adni_benchmark/__init__.py
 src/adni_benchmark/runtime.py
+src/adni_benchmark/source_discovery.py
 src/adni_benchmark.egg-info/PKG-INFO
 src/adni_benchmark.egg-info/SOURCES.txt
 src/adni_benchmark.egg-info/dependency_links.txt
