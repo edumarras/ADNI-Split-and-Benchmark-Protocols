@@ -3,8 +3,16 @@ pyproject.toml
 src/adni_benchmark/__init__.py
 src/adni_benchmark/runtime.py
 src/adni_benchmark/source_discovery.py
+src/adni_benchmark/source_inspection.py
+src/adni_benchmark/source_loading.py
+src/adni_benchmark/source_schema.py
 src/adni_benchmark.egg-info/PKG-INFO
 src/adni_benchmark.egg-info/SOURCES.txt
 src/adni_benchmark.egg-info/dependency_links.txt
+src/adni_benchmark.egg-info/requires.txt
 src/adni_benchmark.egg-info/top_level.txt
 tests/test_runtime.py
+tests/test_source_discovery.py
+tests/test_source_inspection.py
+tests/test_source_loading.py
+tests/test_source_schema.py
