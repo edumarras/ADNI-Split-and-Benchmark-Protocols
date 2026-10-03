@@ -1,0 +1,9 @@
+source_name,total_schema_rows,included_features,excluded_features,current_crosschecked_features,derived_later_features
+ADAS,110,51,59,57,0
+APOERES,1,1,0,1,0
+CDR,10,8,2,8,0
+FAQ,12,11,1,11,0
+MMSE,45,28,17,29,0
+MOCA,44,43,1,43,0
+NEUROBAT,69,60,9,60,0
+PTDEMOG,71,10,61,9,1

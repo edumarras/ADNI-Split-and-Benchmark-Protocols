@@ -1,0 +1,916 @@
+{
+  "stage": "auditA06_freeze_crosschecked_inputs",
+  "script_version": "0.1.2",
+  "created_at_utc": "2026-10-03T13:49:19.867473+00:00",
+  "status": "PASS",
+  "fatal_error": null,
+  "check_count": 271,
+  "failed_check_count": 0,
+  "upstream": {
+    "logical_package_name": "frozen_experiment_v1_1",
+    "temporal_policy_decision_id": "90fefe5ec34d49743612",
+    "benchmark01_validation_required": true,
+    "crosscheck_ledger_version": "1.0.0",
+    "crosscheck_ledger_sha256": "0bfe87ca42e9d9c74c804878a7c09372bc4eb856cf2d60200c315dd301b04fa5",
+    "reconstruction_ledger_sha256": "bc092213439bd4f78916dac61b32a4785ce09704482cd43a0152d358935348ce"
+  },
+  "frozen_invariants": {
+    "participant_mapping_changed": false,
+    "participant_count": 2839,
+    "participant_split_counts": {
+      "train": 1987,
+      "validation": 426,
+      "test": 426
+    },
+    "supervised_population_changed": false,
+    "supervised_visit_count": 9600,
+    "target_catalog_changed": false,
+    "target_values_changed": false,
+    "target_count": 323,
+    "temporal_policy_changed": false,
+    "support_threshold_changed": false,
+    "support_threshold": 50
+  },
+  "sources": {
+    "ADAS": {
+      "source_name": "ADAS",
+      "rows_before": 12542,
+      "rows_after": 12542,
+      "columns_before": 113,
+      "columns_after": 60,
+      "feature_columns_removed_count": 53,
+      "feature_columns_removed": [
+        "NDREASON",
+        "Q10TASK",
+        "Q11TASK",
+        "Q12TASK",
+        "Q8WORD1",
+        "Q8WORD10",
+        "Q8WORD10R",
+        "Q8WORD11",
+        "Q8WORD11R",
+        "Q8WORD12",
+        "Q8WORD12R",
+        "Q8WORD13",
+        "Q8WORD13R",
+        "Q8WORD14",
+        "Q8WORD14R",
+        "Q8WORD15",
+        "Q8WORD15R",
+        "Q8WORD16",
+        "Q8WORD16R",
+        "Q8WORD17",
+        "Q8WORD17R",
+        "Q8WORD18",
+        "Q8WORD18R",
+        "Q8WORD19",
+        "Q8WORD19R",
+        "Q8WORD2",
+        "Q8WORD20",
+        "Q8WORD20R",
+        "Q8WORD21",
+        "Q8WORD21R",
+        "Q8WORD22",
+        "Q8WORD22R",
+        "Q8WORD23",
+        "Q8WORD23R",
+        "Q8WORD24",
+        "Q8WORD24R",
+        "Q8WORD3",
+        "Q8WORD3R",
+        "Q8WORD4",
+        "Q8WORD4R",
+        "Q8WORD5",
+        "Q8WORD5R",
+        "Q8WORD6",
+        "Q8WORD6R",
+        "Q8WORD7",
+        "Q8WORD7R",
+        "Q8WORD8",
+        "Q8WORD8R",
+        "Q8WORD9",
+        "Q8WORD9R",
+        "Q9TASK",
+        "SOURCE",
+        "WORDLIST"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "f9f296465ee5e1790f9e95dc796e5dd434f844981515113ca797824ce5462d76"
+    },
+    "CDR": {
+      "source_name": "CDR",
+      "rows_before": 13074,
+      "rows_after": 13074,
+      "columns_before": 13,
+      "columns_after": 11,
+      "feature_columns_removed_count": 2,
+      "feature_columns_removed": [
+        "CDSOURCE",
+        "CDVERSION"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "536863c20a942784763d9690228d7c4a2c9d349d829794289dae3763d46c5d47"
+    },
+    "FAQ": {
+      "source_name": "FAQ",
+      "rows_before": 12842,
+      "rows_after": 12842,
+      "columns_before": 15,
+      "columns_after": 14,
+      "feature_columns_removed_count": 1,
+      "feature_columns_removed": [
+        "SOURCE"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "1ff833844edb002090f29cc00ce1250251760da7843885f47109e429d8292de5"
+    },
+    "MMSE": {
+      "source_name": "MMSE",
+      "rows_before": 12732,
+      "rows_after": 12732,
+      "columns_before": 47,
+      "columns_after": 32,
+      "feature_columns_removed_count": 16,
+      "feature_columns_removed": [
+        "MMD",
+        "MML",
+        "MMLTR1",
+        "MMLTR2",
+        "MMLTR3",
+        "MMLTR4",
+        "MMLTR5",
+        "MMLTR6",
+        "MMLTR7",
+        "MMO",
+        "MMR",
+        "MMW",
+        "NDREASON",
+        "SOURCE",
+        "WORDLIST",
+        "WORLDSCORE"
+      ],
+      "feature_columns_added_count": 1,
+      "feature_columns_added": [
+        "MM_WORLD_SCORE"
+      ],
+      "output_sha256": "544f189026d3e3cb2e5eda04ed1dcf284f2a3dfeae893812f67328993399fd82"
+    },
+    "MOCA": {
+      "source_name": "MOCA",
+      "rows_before": 8606,
+      "rows_after": 8606,
+      "columns_before": 47,
+      "columns_after": 46,
+      "feature_columns_removed_count": 1,
+      "feature_columns_removed": [
+        "SOURCE"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "2c9e25d255d86a94af169c9f5c62dce173819158a79b9f36d4ce7620059109da"
+    },
+    "NEUROBAT": {
+      "source_name": "NEUROBAT",
+      "rows_before": 15254,
+      "rows_after": 15254,
+      "columns_before": 72,
+      "columns_after": 63,
+      "feature_columns_removed_count": 9,
+      "feature_columns_removed": [
+        "ANART",
+        "ANARTND",
+        "AVDELBEGAN",
+        "AVENDED",
+        "BNTND",
+        "LDELBEGIN",
+        "LIMMEND",
+        "LMSTORY",
+        "SOURCE"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "bf76e097af4fcc58edafc2d629fa64e5f6d247adff3d340b560cbbe2932819ec"
+    },
+    "PTDEMOG": {
+      "source_name": "PTDEMOG",
+      "rows_before": 2772,
+      "rows_after": 2839,
+      "columns_before": 72,
+      "columns_after": 11,
+      "feature_columns_removed_count": 61,
+      "feature_columns_removed": [
+        "PTADBEG",
+        "PTADDX",
+        "PTASIAN",
+        "PTBIRGR",
+        "PTBIRPL",
+        "PTBIRPR",
+        "PTBORN",
+        "PTCLANG",
+        "PTCOGBEG",
+        "PTDOB",
+        "PTDOBYY",
+        "PTENGSPK",
+        "PTENGSPKAGE",
+        "PTETHCATH",
+        "PTIDENT",
+        "PTIMMAGE",
+        "PTIMMWHY",
+        "PTLANGPR1",
+        "PTLANGPR2",
+        "PTLANGPR3",
+        "PTLANGPR4",
+        "PTLANGPR5",
+        "PTLANGPR6",
+        "PTLANGRD1",
+        "PTLANGRD2",
+        "PTLANGRD3",
+        "PTLANGRD4",
+        "PTLANGRD5",
+        "PTLANGRD6",
+        "PTLANGSP",
+        "PTLANGSP1",
+        "PTLANGSP2",
+        "PTLANGSP3",
+        "PTLANGSP4",
+        "PTLANGSP5",
+        "PTLANGSP6",
+        "PTLANGTTL",
+        "PTLANGUN1",
+        "PTLANGUN2",
+        "PTLANGUN3",
+        "PTLANGUN4",
+        "PTLANGUN5",
+        "PTLANGUN6",
+        "PTLANGWR",
+        "PTLANGWR1",
+        "PTLANGWR2",
+        "PTLANGWR3",
+        "PTLANGWR4",
+        "PTLANGWR5",
+        "PTLANGWR6",
+        "PTNLANG",
+        "PTOPI",
+        "PTORIENT",
+        "PTORIENTOT",
+        "PTRTYR",
+        "PTSOURCE",
+        "PTSPOTTIM",
+        "PTSPTIM",
+        "PTTLANG",
+        "PTWORK",
+        "PTWORKHS"
+      ],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "639c98ece1802264c664d24f7495172aa6e90f3a5f2b04a44c7524cfd5ceba21"
+    },
+    "APOERES": {
+      "source_name": "APOERES",
+      "rows_before": 2588,
+      "rows_after": 2588,
+      "columns_before": 3,
+      "columns_after": 3,
+      "feature_columns_removed_count": 0,
+      "feature_columns_removed": [],
+      "feature_columns_added_count": 0,
+      "feature_columns_added": [],
+      "output_sha256": "8f632fa47a1e29d5333a5ea7e9142b81b2e38a07029af421aef086493695708f"
+    }
+  },
+  "special_rule_stats": {
+    "ADAS_UNABLE": {
+      "Q1UNABLE": {
+        "implicit_conducted_filled": 8789,
+        "explicit_conducted_preserved": 3606,
+        "documented_reason_preserved": 54,
+        "unknown_missing_preserved": 93
+      },
+      "Q2UNABLE": {
+        "implicit_conducted_filled": 8799,
+        "explicit_conducted_preserved": 3616,
+        "documented_reason_preserved": 34,
+        "unknown_missing_preserved": 93
+      },
+      "Q3UNABLE": {
+        "implicit_conducted_filled": 8795,
+        "explicit_conducted_preserved": 3612,
+        "documented_reason_preserved": 42,
+        "unknown_missing_preserved": 93
+      },
+      "Q4UNABLE": {
+        "implicit_conducted_filled": 8742,
+        "explicit_conducted_preserved": 3599,
+        "documented_reason_preserved": 108,
+        "unknown_missing_preserved": 93
+      },
+      "Q5UNABLE": {
+        "implicit_conducted_filled": 8797,
+        "explicit_conducted_preserved": 3613,
+        "documented_reason_preserved": 39,
+        "unknown_missing_preserved": 93
+      },
+      "Q6UNABLE": {
+        "implicit_conducted_filled": 8786,
+        "explicit_conducted_preserved": 3608,
+        "documented_reason_preserved": 55,
+        "unknown_missing_preserved": 93
+      },
+      "Q7UNABLE": {
+        "implicit_conducted_filled": 8794,
+        "explicit_conducted_preserved": 3611,
+        "documented_reason_preserved": 44,
+        "unknown_missing_preserved": 93
+      },
+      "Q8UNABLE": {
+        "implicit_conducted_filled": 8764,
+        "explicit_conducted_preserved": 3597,
+        "documented_reason_preserved": 88,
+        "unknown_missing_preserved": 93
+      },
+      "Q13UNABLE": {
+        "implicit_conducted_filled": 8730,
+        "explicit_conducted_preserved": 3586,
+        "documented_reason_preserved": 133,
+        "unknown_missing_preserved": 93
+      }
+    },
+    "MMSE_WORLD": {
+      "legacy_complete_rows": 8882,
+      "legacy_partial_rows": 0,
+      "new_score_rows": 3748,
+      "both_representation_rows": 0,
+      "representation_conflicts": 0,
+      "invalid_legacy_values": 0,
+      "invalid_new_values": 0,
+      "derived_nonmissing_rows": 12630
+    },
+    "PTDEMOG_BASELINE": {
+      "official_rids_with_any_ptdemog_source_row": 2839,
+      "baseline_groups_evaluated": 2839,
+      "groups_with_multiple_rows_in_earliest_wave_or_date": 216,
+      "groups_refined_by_earliest_date_within_wave": 216,
+      "resolved_baseline_participants": 2839,
+      "unresolved_baseline_participants": 0,
+      "old_model_ready_participants": 2772,
+      "newly_available_participants_vs_old_model_ready": 67,
+      "no_longer_available_participants_vs_old_model_ready": 0,
+      "birth_year_metadata_available": 2839,
+      "birth_year_conflicts": 0,
+      "selected_reason_counts": {
+        "unique_temporal_candidate": 2839
+      }
+    },
+    "PTRACCAT": {
+      "changed_cells": 16,
+      "multi_response_cells_collapsed_to_common_more_than_one_category": 14,
+      "unexpected_code_cells": 0
+    },
+    "AGE_AT_TARGET_PREREQUISITES": {
+      "participant_rows_in_age_metadata": 2839,
+      "participants_with_birth_year_candidate": 2839,
+      "birth_year_conflicts": 0,
+      "age_derivation_execution_stage": "BENCHMARK05"
+    },
+    "APOERES_DOMAIN": {
+      "allowed_domain_size": 6,
+      "unexpected_genotype_cells": 0
+    }
+  },
+  "directives": {
+    "count": 198,
+    "sha256": "9cb33f76355fc78f3d3f60ac3de0e66a27601b4172c9d64efcf9926731f026e5"
+  },
+  "directive_policy_checks": {
+    "ADAS_Q9SCORE_Q12SCORE_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "ADAS",
+        "columns": [
+          "Q9SCORE",
+          "Q10SCORE",
+          "Q11SCORE",
+          "Q12SCORE"
+        ],
+        "action": "retain_retype",
+        "final_feature_type": "categorical",
+        "value_transform_id": "categorical_identity"
+      },
+      "observed": [
+        {
+          "column_name": "Q10SCORE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "Q11SCORE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "Q12SCORE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "Q9SCORE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "CDR_six_boxes_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "CDR",
+        "columns": [
+          "CDMEMORY",
+          "CDORIENT",
+          "CDJUDGE",
+          "CDCOMMUN",
+          "CDHOME",
+          "CDCARE"
+        ],
+        "action": "retain_retype",
+        "final_feature_type": "categorical",
+        "value_transform_id": "categorical_identity"
+      },
+      "observed": [
+        {
+          "column_name": "CDCARE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "CDCOMMUN",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "CDHOME",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "CDJUDGE",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "CDMEMORY",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "CDORIENT",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "CDR_CDGLOBAL_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "CDR",
+        "columns": [
+          "CDGLOBAL"
+        ],
+        "action": "retain_retype",
+        "final_feature_type": "categorical",
+        "value_transform_id": "categorical_identity"
+      },
+      "observed": [
+        {
+          "column_name": "CDGLOBAL",
+          "crosscheck_action": "retain_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "CDR_CDRSB_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "CDR",
+        "columns": [
+          "CDRSB"
+        ],
+        "action": "retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "CDRSB",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "FAQ_items_official_map_then_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "FAQ",
+        "columns": [
+          "FAQFINAN",
+          "FAQFORM",
+          "FAQSHOP",
+          "FAQGAME",
+          "FAQBEVG",
+          "FAQMEAL",
+          "FAQEVENT",
+          "FAQTV",
+          "FAQREM",
+          "FAQTRAVL"
+        ],
+        "action": "retain_transform_retype",
+        "final_feature_type": "categorical",
+        "value_transform_id": "faq_official_item_score_map"
+      },
+      "observed": [
+        {
+          "column_name": "FAQBEVG",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQEVENT",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQFINAN",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQFORM",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQGAME",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQMEAL",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQREM",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQSHOP",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQTRAVL",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        },
+        {
+          "column_name": "FAQTV",
+          "crosscheck_action": "retain_transform_retype",
+          "final_feature_type": "categorical",
+          "value_transform_id": "faq_official_item_score_map"
+        }
+      ]
+    },
+    "FAQTOTAL_retained_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "FAQ",
+        "columns": [
+          "FAQTOTAL"
+        ],
+        "action": "retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "FAQTOTAL",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "MM_WORLD_SCORE_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "MMSE",
+        "columns": [
+          "MM_WORLD_SCORE"
+        ],
+        "action": "derive_retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "MM_WORLD_SCORE",
+          "crosscheck_action": "derive_retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "MMSCORE_retained_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "MMSE",
+        "columns": [
+          "MMSCORE"
+        ],
+        "action": "retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "MMSCORE",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "MOCA_DELW1_DELW5_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "MOCA",
+        "columns": [
+          "DELW1",
+          "DELW2",
+          "DELW3",
+          "DELW4",
+          "DELW5"
+        ],
+        "action": "retain",
+        "final_feature_type": "categorical",
+        "value_transform_id": "categorical_identity"
+      },
+      "observed": [
+        {
+          "column_name": "DELW1",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "DELW2",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "DELW3",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "DELW4",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "DELW5",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "MOCA_total_retained_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "MOCA",
+        "columns": [
+          "MOCA"
+        ],
+        "action": "retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "MOCA",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "NEUROBAT_summary_scores_retained_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "NEUROBAT",
+        "columns": [
+          "CLOCKSCOR",
+          "COPYSCOR",
+          "BNTTOTAL",
+          "MINTTOTAL"
+        ],
+        "action": "retain",
+        "final_feature_type": "numeric",
+        "value_transform_id": "numeric_identity"
+      },
+      "observed": [
+        {
+          "column_name": "BNTTOTAL",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        },
+        {
+          "column_name": "CLOCKSCOR",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        },
+        {
+          "column_name": "COPYSCOR",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        },
+        {
+          "column_name": "MINTTOTAL",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        }
+      ]
+    },
+    "PTDEMOG_common_core_types": {
+      "status": "PASS",
+      "expected": {
+        "PTGENDER": "categorical",
+        "PTHAND": "categorical",
+        "PTMARRY": "categorical",
+        "PTEDUCAT": "numeric",
+        "PTNOTRT": "categorical",
+        "PTHOME": "categorical",
+        "PTPLANG": "categorical",
+        "PTETHCAT": "categorical",
+        "PTRACCAT": "categorical"
+      },
+      "observed": [
+        {
+          "column_name": "PTEDUCAT",
+          "crosscheck_action": "retain",
+          "final_feature_type": "numeric",
+          "value_transform_id": "numeric_identity"
+        },
+        {
+          "column_name": "PTETHCAT",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTGENDER",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTHAND",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTHOME",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "ptdemog_pthome_harmonization"
+        },
+        {
+          "column_name": "PTMARRY",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTNOTRT",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTPLANG",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        },
+        {
+          "column_name": "PTRACCAT",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "AGE_AT_TARGET_derive_later_numeric": {
+      "status": "PASS",
+      "expected": {
+        "source": "PTDEMOG",
+        "columns": [
+          "AGE_AT_TARGET"
+        ],
+        "action": "derive_later",
+        "final_feature_type": "numeric",
+        "value_transform_id": "derive_age_at_target_from_birth_year_and_current_target_date"
+      },
+      "observed": [
+        {
+          "column_name": "AGE_AT_TARGET",
+          "crosscheck_action": "derive_later",
+          "final_feature_type": "numeric",
+          "value_transform_id": "derive_age_at_target_from_birth_year_and_current_target_date"
+        }
+      ]
+    },
+    "APOERES_GENOTYPE_categorical": {
+      "status": "PASS",
+      "expected": {
+        "source": "APOERES",
+        "columns": [
+          "GENOTYPE"
+        ],
+        "action": "retain",
+        "final_feature_type": "categorical",
+        "value_transform_id": "categorical_identity"
+      },
+      "observed": [
+        {
+          "column_name": "GENOTYPE",
+          "crosscheck_action": "retain",
+          "final_feature_type": "categorical",
+          "value_transform_id": "categorical_identity"
+        }
+      ]
+    },
+    "all_removed_columns_marked_excluded": {
+      "status": "PASS",
+      "exclusion_directive_count": 143
+    },
+    "retained_current_features_exist": {
+      "status": "PASS",
+      "missing": []
+    }
+  },
+  "feature_catalog": {
+    "count": 218,
+    "sha256": "62b72c05e3ecc5509487a4c57e334edc08d43171b8215cadb23e039b82210dc4"
+  },
+  "age_at_target": {
+    "derived_in_A06": false,
+    "execution_stage": "BENCHMARK05",
+    "A06_prerequisite_metadata_local_only": true,
+    "raw_birth_fields_exposed_as_predictors": false
+  },
+  "privacy": {
+    "contains_participant_identifier_values": false,
+    "contains_visit_identifier_values": false,
+    "contains_individual_clinical_dates": false,
+    "contains_individual_clinical_or_cognitive_values": false,
+    "contains_individual_genotype_values": false,
+    "contains_predictions_or_errors": false,
+    "contains_only_aggregate_counts_column_names_booleans_and_hashes": true,
+    "SAFE_TO_SHARE": true,
+    "local_only_artifacts_exist_and_must_not_be_shared": true
+  }
+}

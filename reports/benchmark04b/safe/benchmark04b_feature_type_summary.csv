@@ -1,0 +1,5 @@
+official_feature_type,official_encoding,feature_count
+numeric,numeric_standardized,77
+binary,binary_identity,71
+categorical,categorical_one_hot,60
+multi_response,multi_hot,4

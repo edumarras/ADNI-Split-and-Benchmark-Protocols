@@ -1,0 +1,6 @@
+suggested_type,suggested_encoding,feature_count
+categorical_numeric_code_candidate,one_hot_or_numeric_review,99
+binary_numeric_candidate,binary_or_one_hot_review,76
+numeric_candidate,numeric_median_imputation,34
+multi_response_candidate,multi_hot,8
+categorical_candidate,one_hot,1

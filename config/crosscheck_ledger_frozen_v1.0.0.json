@@ -1,0 +1,80 @@
+{
+  "ledger_version": "1.0.0",
+  "status": "FROZEN",
+  "historical_ledger_sha256": "0bfe87ca42e9d9c74c804878a7c09372bc4eb856cf2d60200c315dd301b04fa5",
+  "reconstruction_note": "Reconstructed control ledger for the clean repository. The historical SHA-256 is preserved as experiment identity; semantic execution remains implemented and validated by auditA06_freeze_crosschecked_inputs v0.1.2.",
+  "precedence_rule": "Frozen semantic cross-check decisions take precedence over downstream heuristic typing.",
+  "immutable_invariants": {
+    "participant_split": {
+      "train": 1987,
+      "validation": 426,
+      "test": 426,
+      "rule": "do_not_rerun_or_reselect"
+    },
+    "supervised_population": {
+      "participants": 2839,
+      "visits": 9600
+    },
+    "targets": {
+      "count": 323
+    },
+    "support_threshold": 50,
+    "temporal_policy": "keep_strict_date_policy",
+    "model_protocol": "full_pca90_and_one_shot_test_protocol"
+  },
+  "cross_cutting_policies": {
+    "missing_sentinels": [
+      "",
+      "-1",
+      "-4"
+    ],
+    "administrative_protocol_metadata": "exclude_as_predictors_retain_only_for_qc_or_harmonization",
+    "official_summary_scores": "retain",
+    "low_cardinality_ordinal_variables": "categorical_one_hot_policy",
+    "phase_specific_cognitive_features": "retain_when_semantically_valid"
+  },
+  "modalities": {
+    "ADAS": {
+      "policy": "remove frozen administrative/semantic exclusions and harmonize UNABLE conducted state"
+    },
+    "CDR": {
+      "policy": "remove source/version metadata; retain clinical domains and official summaries"
+    },
+    "FAQ": {
+      "policy": "remove SOURCE; retain item-level scores and FAQTOTAL"
+    },
+    "MMSE": {
+      "policy": "remove administrative fields and harmonize WORLD into MM_WORLD_SCORE"
+    },
+    "MOCA": {
+      "policy": "retain semantically valid cognitive fields; treat delayed-recall modes categorically"
+    },
+    "NEUROBAT": {
+      "policy": "remove administrative/timing fields; retain documented summary scores"
+    },
+    "PTDEMOG": {
+      "policy": "use common demographic core, refine baseline within earliest protocol wave, harmonize PTRACCAT, prepare LOCAL_ONLY birth-year metadata; raw birth fields are not predictors"
+    },
+    "APOERES": {
+      "policy": "GENOTYPE only; validate against six-category domain and fail closed"
+    }
+  },
+  "pipeline": {
+    "stage_order": [
+      "frozen_experiment_v1_1",
+      "benchmark01b_validate_frozen_package",
+      "auditA06_freeze_crosschecked_inputs",
+      "benchmark02b_profile_input_features"
+    ],
+    "a06_responsibilities": [
+      "semantic_harmonization",
+      "canonical_feature_derivation",
+      "ptdemog_baseline_refinement",
+      "apoe_domain_validation",
+      "frozen_exclusions",
+      "invariant_checks",
+      "safe_aggregate_reporting"
+    ]
+  },
+  "implementation_details_pending": []
+}

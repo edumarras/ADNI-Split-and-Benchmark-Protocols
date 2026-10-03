@@ -1,0 +1,54 @@
+{
+  "benchmark02b_script_version": "0.2.1",
+  "benchmark02_script_version": "0.2.1",
+  "created_at_utc": "2026-10-03T01:50:48.434991+00:00",
+  "stage": "benchmark02b",
+  "profiling_passed": true,
+  "check_count": 78,
+  "failed_check_count": 0,
+  "fatal_error": null,
+  "upstream_contract": {
+    "logical_frozen_package": "frozen_experiment_v1_1",
+    "temporal_policy_decision_id": "90fefe5ec34d49743612",
+    "crosschecked_inputs": "crosschecked_inputs_v1",
+    "a06_script_version": "0.1.2",
+    "crosscheck_ledger_version": "1.0.0",
+    "crosscheck_ledger_sha256": "0bfe87ca42e9d9c74c804878a7c09372bc4eb856cf2d60200c315dd301b04fa5"
+  },
+  "aggregate_summary": {
+    "anchor_rows": 9600,
+    "anchor_participants": 2839,
+    "feature_count": 218,
+    "source_count": 8,
+    "features_with_a06_directive": 54,
+    "features_without_a06_directive": 164
+  },
+  "type_suggestion_counts": {
+    "categorical_numeric_code_candidate": 99,
+    "binary_numeric_candidate": 76,
+    "numeric_candidate": 34,
+    "multi_response_candidate": 8,
+    "categorical_candidate": 1
+  },
+  "train_support_band_counts": {
+    "009_over_500": 216,
+    "001_1_to_5": 1,
+    "006_51_to_100": 1
+  },
+  "advisory_flags": {
+    "snapshot_train_all_missing_features": 0,
+    "snapshot_train_effective_constant_features": 0,
+    "snapshot_train_missingness_at_least_95_features": 2,
+    "snapshot_train_missingness_at_least_99_features": 1,
+    "snapshot_train_support_30_or_less_features": 1,
+    "multi_response_candidate_features": 8
+  },
+  "privacy": {
+    "contains_individual_records": false,
+    "contains_participant_identifiers": false,
+    "contains_visit_identifiers": false,
+    "contains_medical_values": false,
+    "contains_only_column_names_and_aggregate_profile_statistics": true
+  },
+  "methodological_note": "No additional feature was automatically included or excluded in BENCHMARK02. A06 semantic directives are frozen upstream and take precedence over heuristic type suggestions. Remaining heuristic suggestions are diagnostic only."
+}

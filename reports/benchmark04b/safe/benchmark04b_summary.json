@@ -1,0 +1,59 @@
+{
+  "stage": "benchmark04b",
+  "script_version": "0.1.2",
+  "created_at_utc": "2026-10-03T12:38:14.276662+00:00",
+  "status": "PASS",
+  "fatal_error": null,
+  "check_count": 70,
+  "failed_check_count": 0,
+  "schema_decision_id": "af33ab072e44c35c04b442a5",
+  "upstream": {
+    "logical_frozen_package": "frozen_experiment_v1_1",
+    "temporal_policy_decision_id": "90fefe5ec34d49743612",
+    "crosscheck_ledger_version": "1.0.0",
+    "crosscheck_ledger_sha256": "0bfe87ca42e9d9c74c804878a7c09372bc4eb856cf2d60200c315dd301b04fa5",
+    "a06_script_version": "0.1.2",
+    "benchmark02b_script_version": "0.2.1"
+  },
+  "counts": {
+    "schema_rows_total": 362,
+    "current_crosschecked_features": 218,
+    "derived_later_features": 1,
+    "included_features": 212,
+    "excluded_features": 150,
+    "transform_registry_rows": 16,
+    "features_with_A06_override_or_directive": 198,
+    "features_preserving_legacy_semantics": 157,
+    "semantic_changes_vs_legacy_current_features": 35
+  },
+  "support_policy": {
+    "threshold": 50,
+    "applied_here": false,
+    "next_application_stage": "BENCHMARK05b",
+    "removes_visits": false
+  },
+  "age_at_target": {
+    "frozen_in_schema": true,
+    "materialized_here": false,
+    "materialization_stage": "BENCHMARK05b"
+  },
+  "outputs": {
+    "schema": "config\\benchmark_feature_schema_b.csv",
+    "schema_sha256": "464cb2f311db75514fc034f7d590f21b19f36f367d1e503fdfb1a3a9d808f0a3",
+    "transform_registry": "config\\benchmark_feature_transform_registry_b.csv",
+    "transform_registry_sha256": "876001a552f811e6b1754627a6cf325f3e0215a0c2ff78b5929bff99567d5fee",
+    "support_policy": "config\\benchmark_support_policy_b.json",
+    "support_policy_sha256": "055b6e86ed53d2932e014c564e1985559f5982b6a7d52361eb1bdf88d203a742",
+    "schema_lock": "config\\benchmark_schema_lock_b.json",
+    "schema_lock_sha256": "3a8bc9a502f7f6c1fcf1614281f675db9bdd75fbe7b634b9d82e5fa419679422"
+  },
+  "privacy": {
+    "contains_individual_records": false,
+    "contains_participant_identifiers": false,
+    "contains_visit_identifiers": false,
+    "contains_medical_values": false,
+    "contains_only_schema_column_names_aggregate_counts_hashes_and_rules": true,
+    "SAFE_TO_SHARE": true
+  },
+  "methodological_note": "A06 frozen directives have precedence. Unchanged crosschecked features preserve the legacy frozen semantic schema. BENCHMARK02 heuristics are diagnostic only. Support 50 is frozen but applied later per scenario/block in BENCHMARK05b."
+}

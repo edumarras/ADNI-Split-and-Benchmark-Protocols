@@ -1,0 +1,9 @@
+source_name,rows,columns,features,missing_key_rows,duplicate_key_rows,invalid_split_rows,unofficial_participant_rows,split_mismatch_rows,catalog_matches_table,passed
+ADAS,12542,113,110,0,0,0,0,0,True,True
+CDR,13074,13,10,0,0,0,0,0,True,True
+FAQ,12842,15,12,0,0,0,0,0,True,True
+MMSE,12732,47,44,0,0,0,0,0,True,True
+MOCA,8606,47,44,0,0,0,0,0,True,True
+NEUROBAT,15254,72,69,0,0,0,0,0,True,True
+PTDEMOG,2772,72,70,0,0,0,0,0,True,True
+APOERES,2588,3,1,0,0,0,0,0,True,True

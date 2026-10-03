@@ -1,0 +1,6 @@
+official_decision_origin,official_semantic_include,feature_count
+A06_frozen_crosscheck_directive,True,54
+A06_frozen_crosscheck_exclusion,False,143
+A06_frozen_derive_later_directive,True,1
+legacy_schema_preserved_exclusion_for_unchanged_feature,False,7
+legacy_schema_preserved_for_unchanged_feature,True,157

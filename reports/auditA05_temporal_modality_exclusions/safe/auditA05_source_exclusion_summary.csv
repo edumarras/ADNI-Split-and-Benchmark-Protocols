@@ -1,0 +1,7 @@
+source_name,unsafe_previous_block_present,same_day_present,after_current_mri_present,unsafe_pair_count,unsafe_pair_count_suppressed
+ADAS,False,False,False,0.0,False
+CDR,True,True,False,,True
+FAQ,True,True,False,,True
+MMSE,False,False,False,0.0,False
+MOCA,False,False,False,0.0,False
+NEUROBAT,False,False,False,0.0,False

@@ -1,0 +1,17 @@
+{
+  "policy_version": "2.0.0-crosschecked-b",
+  "frozen": true,
+  "freeze_stage": "benchmark04b",
+  "official_decision_id": "af33ab072e44c35c04b442a5",
+  "selected_support_threshold_participants": 50,
+  "support_unit": "distinct_fit_participants_with_observed_original_feature",
+  "support_application": "recomputed_per_scenario_and_per_temporal_block_on_fit_data",
+  "support_filter_removes_visits": false,
+  "support_evaluated_before_encoding": true,
+  "support_recomputed_at_final_refit": true,
+  "statistical_removal_rule": "remove_column_if_support_lt_50_or_all_missing_or_effectively_constant_in_fit_never_remove_visits",
+  "derived_feature_exception": {
+    "PTDEMOG__AGE_AT_TARGET": "count distinct fit participants with valid derived age after local derivation and before encoding"
+  },
+  "methodological_note": "Threshold 50 was frozen before this corrected rerun and is not re-selected in BENCHMARK04B."
+}

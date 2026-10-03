@@ -1,9 +1,32 @@
-.pytest_cache/
+# Python
 __pycache__/
-*.pyc
-/data/
+*.py[cod]
 *.egg-info/
+.pytest_cache/
+
+# Virtual environments / local environment
+.venv/
+venv/
+.env
+
+# IDE
 .vscode/
+
+# Build / coverage
+build/
+dist/
+.coverage
+htmlcov/
+
+# All ADNI data and generated individualized artifacts
+/data/
+
+# Local utilities
 /local_tools/
-/data/processed/local_only/
-/reports/auto_split_maker/local_only/
+
+# Never version individualized audit outputs
+/reports/**/local_only/
+
+# Runtime logs
+/reports/**/logs/
+*.log

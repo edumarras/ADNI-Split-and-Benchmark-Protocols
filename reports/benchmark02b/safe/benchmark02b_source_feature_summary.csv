@@ -1,0 +1,9 @@
+source_name,grain,feature_count,snapshot_train_all_missing_features,snapshot_train_effective_constant_features,snapshot_train_observed_constant_features,snapshot_train_missingness_at_least_95_features,snapshot_train_missingness_at_least_99_features,multi_response_candidate_features,low_support_30_or_less_features
+ADAS,visit,57,0,0,1,1,1,8,1
+APOERES,participant,1,0,0,0,0,0,0,0
+CDR,visit,8,0,0,0,0,0,0,0
+FAQ,visit,11,0,0,0,0,0,0,0
+MMSE,visit,29,0,0,0,0,0,0,0
+MOCA,visit,43,0,0,0,0,0,0,0
+NEUROBAT,visit,60,0,0,0,1,0,0,0
+PTDEMOG,participant,9,0,0,0,0,0,0,0

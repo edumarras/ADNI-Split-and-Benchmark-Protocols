@@ -1,0 +1,39 @@
+{
+  "stage": "auditA05_temporal_modality_exclusions",
+  "script_version": "0.1.1",
+  "created_at_utc": "2026-10-03T13:07:56.583313+00:00",
+  "audit_passed": true,
+  "check_count": 14,
+  "failed_check_count": 0,
+  "fatal_error": null,
+  "policy": {
+    "comparison": "previous source clinical date versus current target MRI EXAMDATE",
+    "unsafe_relations": [
+      "same_day_as_current_mri",
+      "after_current_mri"
+    ],
+    "recommended_action": "exclude only the affected previous source block"
+  },
+  "aggregate": {
+    "unsafe_source_pair_actions_present": true,
+    "unsafe_source_pair_action_count": null,
+    "unsafe_source_pair_action_count_suppressed": true,
+    "affected_participants_present": true,
+    "affected_participant_count": null,
+    "affected_participant_count_suppressed": true
+  },
+  "local_only_manifest": {
+    "relative_path": "reports/auditA05_temporal_modality_exclusions/local_only/LOCAL_ONLY_temporal_modality_exclusions.csv",
+    "sha256": "fa9bdd7990ef105035230d041fb22887c06347d4fa7672f679726b953698f3f2",
+    "contains_individualized_keys": true,
+    "must_not_be_uploaded_or_versioned": true
+  },
+  "privacy": {
+    "safe_outputs_contain_participant_identifiers": false,
+    "safe_outputs_contain_visit_identifiers": false,
+    "safe_outputs_contain_dates": false,
+    "safe_outputs_contain_medical_values": false,
+    "local_only_manifest_contains_individualized_keys": true,
+    "small_cell_suppression_threshold": 5
+  }
+}

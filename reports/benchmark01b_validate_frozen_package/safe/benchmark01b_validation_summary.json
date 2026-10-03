@@ -1,0 +1,119 @@
+{
+  "benchmark01_script_version": "0.2.0",
+  "created_at_utc": "2026-10-03T01:17:25.532220+00:00",
+  "stage": "benchmark01b_validate_frozen_package_v1_1",
+  "validation_passed": true,
+  "check_count": 237,
+  "failed_check_count": 0,
+  "fatal_error": null,
+  "aggregate_summary": {
+    "inventory": {
+      "actual_file_count_including_ignored_metadata": 71,
+      "content_file_count": 71,
+      "ignored_metadata_file_count": 0,
+      "ignored_metadata_relative_paths": [],
+      "inventory_row_count": 69,
+      "base_inventory_row_count": 63,
+      "unlisted_content_file_count": 2,
+      "unlisted_content_relative_paths": [
+        "04_official_split/frozen_file_inventory.csv",
+        "04_official_split/official_frozen_manifest.json"
+      ],
+      "missing_listed_file_count": 0,
+      "base_v1_missing_file_count": 0,
+      "base_v1_hash_mismatch_count": 0,
+      "base_v1_lineage_metadata_mismatch_count": 0,
+      "inventory_sha256": "26fbddbdb9517201453ae36dca579a0249dba7b4122aa342f97e383bd604391b",
+      "manifest_sha256": "72e92e425a883b1d5167a1e3246494207f402622285bc681f9e3e01cb7b54928",
+      "base_inventory_sha256": "1fb4aa0b92840c076f0280e4a59672b8165cc82895c19eb6f8c60b98e1199ce9",
+      "base_manifest_sha256": "c3c8fe7bd9eb0a8711a0749fc7471f8ed4c42399956793c0389f0c10ce27acba"
+    },
+    "base_manifest": {
+      "source_script_version": "1.0.1",
+      "candidate_id": 10185,
+      "candidate_seed": 42010184,
+      "target_catalog_sha256": "92b511bfc217551e952fa4f4334d8271cc7aa64675532e723d92840b8790ed8d"
+    },
+    "manifest": {
+      "logical_package_name": "frozen_experiment_v1_1",
+      "base_package_name": "frozen_experiment_v1",
+      "source_script_version": "0.1.0",
+      "temporal_policy_decision_id": "90fefe5ec34d49743612",
+      "temporal_policy_name": "strict_date_interval_same_wave_previous_visit_v1",
+      "critical_hash_mismatch_count": 0,
+      "temporal_artifact_hash_mismatch_count": 0
+    },
+    "temporal_policy": {
+      "temporal_policy_decision_id": "90fefe5ec34d49743612",
+      "policy_name": "strict_date_interval_same_wave_previous_visit_v1",
+      "recomputed_policy_payload_sha256": "2752fe3a5f4bcfb25396f431f2be8a11086da857f97df6b11fb0a0ef4163c53e",
+      "final_eligible": {
+        "train": 1426,
+        "validation": 301
+      }
+    },
+    "population": {
+      "participants": 2839,
+      "visits": 9600
+    },
+    "split": {
+      "participant_counts": {
+        "train": 1987,
+        "validation": 426,
+        "test": 426
+      },
+      "visit_counts": {
+        "train": 6707,
+        "validation": 1445,
+        "test": 1448
+      },
+      "participant_overlaps": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "split_mapping_sha256": "6e5d6b401e3a66f2bf03f5d278fb3db174f794313b215a3bbed4a4ce0803658d"
+    },
+    "targets": {
+      "target_count": 323,
+      "target_catalog_sha256": "92b511bfc217551e952fa4f4334d8271cc7aa64675532e723d92840b8790ed8d",
+      "missing_target_values": 0,
+      "nonfinite_target_values": 0
+    },
+    "feature_catalog": {
+      "candidate_feature_count": 360,
+      "source_count": 8
+    },
+    "input_sources": {
+      "source_count": 8,
+      "passed_source_count": 8,
+      "row_counts": {
+        "ADAS": 12542,
+        "CDR": 13074,
+        "FAQ": 12842,
+        "MMSE": 12732,
+        "MOCA": 8606,
+        "NEUROBAT": 15254,
+        "PTDEMOG": 2772,
+        "APOERES": 2588
+      },
+      "feature_counts": {
+        "ADAS": 110,
+        "CDR": 10,
+        "FAQ": 12,
+        "MMSE": 44,
+        "MOCA": 44,
+        "NEUROBAT": 69,
+        "PTDEMOG": 70,
+        "APOERES": 1
+      }
+    }
+  },
+  "privacy": {
+    "contains_individual_records": false,
+    "contains_participant_identifiers": false,
+    "contains_visit_identifiers": false,
+    "contains_medical_values": false,
+    "contains_only_aggregate_counts_file_metadata_and_global_hashes": true
+  }
+}

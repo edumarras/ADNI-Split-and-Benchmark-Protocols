@@ -1,0 +1,15 @@
+check,passed,expected,observed
+artifact__pairing,True,True,True
+artifact__postprocessed,True,True,True
+artifact__mri,True,True,True
+artifact__ADAS,True,True,True
+artifact__CDR,True,True,True
+artifact__FAQ,True,True,True
+artifact__MMSE,True,True,True
+artifact__MOCA,True,True,True
+artifact__NEUROBAT,True,True,True
+eligible_pair_count,True,1727,1727
+eligible_participant_unique,True,True,True
+all_eligible_current_mri_dates_available,True,0,0
+local_manifest_unique_participant_source,True,0,0
+unsafe_actions_identified,True,True,True
