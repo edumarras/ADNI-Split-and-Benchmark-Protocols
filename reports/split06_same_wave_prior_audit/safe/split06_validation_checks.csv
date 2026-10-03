@@ -1,0 +1,10 @@
+check,passed,detail
+development_split_contains_no_test,True,"splits=['train', 'validation']"
+one_current_target_per_development_participant,True,rows=2413 participants=2413
+reproduces_benchmark05_ambiguous_count__train,True,observed=269 expected=269
+reproduces_benchmark05_ambiguous_count__validation,True,observed=58 expected=58
+attrition_accounts_for_all_participants__train,True,attrition=1987 participants=1987
+attrition_accounts_for_all_participants__validation,True,attrition=426 participants=426
+safe_outputs_contain_no_individual_keys,True,"No RID, RID+VISCODE2 pair, date value, medical value, prediction, or MRI target value is written."
+frozen_package_not_modified,True,The stage is read-only with respect to frozen_experiment_v1.
+test_not_used,True,All analyses are restricted to train and validation.

@@ -1,0 +1,7 @@
+source_name,development_rows,candidate_visit_keys,test_rows_retained
+ADAS,10663,10663,0
+CDR,11131,11131,0
+FAQ,10923,10923,0
+MMSE,10827,10827,0
+MOCA,7344,7344,0
+NEUROBAT,12974,12974,0

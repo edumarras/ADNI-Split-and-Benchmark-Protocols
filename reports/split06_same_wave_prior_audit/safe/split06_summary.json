@@ -1,0 +1,70 @@
+{
+  "stage": "split06_audit_same_wave_prior_visits",
+  "script_version": "0.1.0",
+  "created_at_utc": "2026-10-03T00:00:26.715857+00:00",
+  "audit_passed": true,
+  "check_count": 9,
+  "failed_check_count": 0,
+  "scope": {
+    "splits_used": [
+      "train",
+      "validation"
+    ],
+    "test_used": false,
+    "mri_target_values_loaded": false,
+    "models_trained": false,
+    "frozen_package_modified": false,
+    "individualized_outputs_written": false
+  },
+  "frozen_package": {
+    "path": "frozen_experiment_v1",
+    "official_participant_split_sha256": "c4bd93237ba40724493321ac8351aee82885e12fcb84181f84c3c24a7026acdc",
+    "supervised_anchor_sha256": "aba5126b2893ac6e2f5af57d8432c6f63b9d21d6bf7d923374e17e09e9908b92"
+  },
+  "expected_ambiguous_counts": {
+    "train": 269,
+    "validation": 58
+  },
+  "ambiguous_policy_summary": [
+    {
+      "split": "train",
+      "ambiguous_participants": 269,
+      "all_candidates_dated": 269,
+      "partially_dated": 0,
+      "none_dated": 0,
+      "strict_interval_latest_recoverable": 260,
+      "strict_interval_latest_and_before_current": 256,
+      "exact_consensus_latest_recoverable": 22,
+      "median_date_latest_recoverable_sensitivity_only": 268,
+      "explicit_zero_wave_order_recoverable_sensitivity_only": 269,
+      "has_previous_target_complete_visit": 219,
+      "union_adds_modalities": 269,
+      "union_adds_features": 269,
+      "test_rows_used": 0
+    },
+    {
+      "split": "validation",
+      "ambiguous_participants": 58,
+      "all_candidates_dated": 58,
+      "partially_dated": 0,
+      "none_dated": 0,
+      "strict_interval_latest_recoverable": 56,
+      "strict_interval_latest_and_before_current": 55,
+      "exact_consensus_latest_recoverable": 7,
+      "median_date_latest_recoverable_sensitivity_only": 58,
+      "explicit_zero_wave_order_recoverable_sensitivity_only": 58,
+      "has_previous_target_complete_visit": 49,
+      "union_adds_modalities": 58,
+      "union_adds_features": 58,
+      "test_rows_used": 0
+    }
+  ],
+  "methodological_interpretation": "Same protocol month does not imply one exact visit. The audit compares date-based and explicit-order policies without concatenating visits or changing the frozen split.",
+  "privacy": {
+    "safe_outputs_contain_participant_identifiers": false,
+    "safe_outputs_contain_visit_identifiers": false,
+    "safe_outputs_contain_date_values": false,
+    "safe_outputs_contain_medical_values": false,
+    "safe_outputs_contain_predictions": false
+  }
+}

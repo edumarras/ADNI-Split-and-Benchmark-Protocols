@@ -1,0 +1,28 @@
+check,passed,detail
+official_participant_split_matches_split06,True,actual=c4bd93237ba40724493321ac8351aee82885e12fcb84181f84c3c24a7026acdc expected=c4bd93237ba40724493321ac8351aee82885e12fcb84181f84c3c24a7026acdc
+supervised_anchor_matches_split06,True,actual=aba5126b2893ac6e2f5af57d8432c6f63b9d21d6bf7d923374e17e09e9908b92 expected=aba5126b2893ac6e2f5af57d8432c6f63b9d21d6bf7d923374e17e09e9908b92
+test_not_in_pairing,True,test rows=0
+test_not_in_date_profiles,True,test rows=0
+one_current_target_per_development_participant,True,current=2413 pairing=2413
+participant_split_unchanged_population,True,participants=2839 expected=2839
+train__unique_previous_count,True,observed=1170 expected=1170
+train__ambiguous_reproduced,True,observed=269 expected=269
+train__strict_recovered,True,observed=256 expected=256
+train__strict_no_winner,True,observed=9 expected=9
+train__winner_not_before_current,True,observed=4 expected=4
+train__final_eligible,True,observed=1426 expected=1426
+validation__unique_previous_count,True,observed=246 expected=246
+validation__ambiguous_reproduced,True,observed=58 expected=58
+validation__strict_recovered,True,observed=55 expected=55
+validation__strict_no_winner,True,observed=2 expected=2
+validation__winner_not_before_current,True,observed=1 expected=1
+validation__final_eligible,True,observed=301 expected=301
+selected_previous_keys_differ_from_current,True,selected_pairs=1727
+selected_protocol_gap_positive,True,all selected protocol gaps > 0
+strict_selected_date_gap_positive,True,strict selected pairs=311
+no_visit_concatenation,True,one exact previous VISCODE2 per eligible participant; no feature union materialized
+base_inventory_verified,True,files=63
+base_files_unchanged_in_v1_1,True,files=65
+historical_temporal_policy_id_preserved,True,decision_id=90fefe5ec34d49743612
+new_inventory_written,True,inventory_rows=69
+new_manifest_written,True,manifest staged

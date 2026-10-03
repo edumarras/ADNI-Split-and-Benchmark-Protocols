@@ -1,0 +1,9 @@
+metric,count,minimum,q25,median,mean,q75,maximum,split
+pairwise_median_date_gap_days,269,0.0,26.0,35.0,45.5910780669145,54.0,271.0,train
+union_modality_gain,269,2.0,2.0,2.0,2.0,2.0,2.0,train
+union_feature_gain,269,44.0,49.0,50.0,48.75092936802974,50.0,52.0,train
+candidate_count,269,2.0,2.0,2.0,2.0,2.0,2.0,train
+pairwise_median_date_gap_days,58,13.0,28.0,39.5,46.6551724137931,58.75,169.0,validation
+union_modality_gain,58,2.0,2.0,2.0,2.0,2.0,2.0,validation
+union_feature_gain,58,44.0,49.0,49.0,48.53448275862069,50.0,51.0,validation
+candidate_count,58,2.0,2.0,2.0,2.0,2.0,2.0,validation

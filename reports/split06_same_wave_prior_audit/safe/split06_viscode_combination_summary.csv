@@ -1,0 +1,3 @@
+split,candidate_viscode_combination,candidate_count,participant_count,small_cell_suppressed
+train,bl+sc,2,269.0,False
+validation,bl+sc,2,58.0,False

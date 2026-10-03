@@ -1,0 +1,7 @@
+split,status,reason,participant_count
+train,excluded,ambiguous_most_recent_prior_protocol_month,269
+train,eligible,eligible_unique_previous_visit,1170
+train,excluded,only_unknown_or_non_earlier_history,548
+validation,excluded,ambiguous_most_recent_prior_protocol_month,58
+validation,eligible,eligible_unique_previous_visit,246
+validation,excluded,only_unknown_or_non_earlier_history,122

@@ -1,0 +1,7 @@
+source_name,development_rows,feature_columns,observed_feature_cells,test_rows_used
+ADAS,10663,110,802959,0
+CDR,11131,10,107346,0
+FAQ,10923,12,130418,0
+MMSE,10827,44,356135,0
+MOCA,7344,44,311947,0
+NEUROBAT,12974,69,544392,0

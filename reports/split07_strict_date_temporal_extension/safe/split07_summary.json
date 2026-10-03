@@ -1,0 +1,70 @@
+{
+  "stage": "split07_freeze_strict_date_temporal_extension",
+  "script_version": "0.1.0",
+  "created_at_utc": "2026-10-03T00:23:38.156650+00:00",
+  "freeze_passed": true,
+  "temporal_policy_decision_id": "90fefe5ec34d49743612",
+  "reconstruction_policy_payload_sha256": "2752fe3a5f4bcfb25396f431f2be8a11086da857f97df6b11fb0a0ef4163c53e",
+  "scope": {
+    "decision_splits": [
+      "train",
+      "validation"
+    ],
+    "test_values_used": false,
+    "test_pairings_materialized": false,
+    "mri_target_values_loaded": false,
+    "models_trained": false,
+    "participant_split_changed": false,
+    "supervised_population_changed": false,
+    "visits_concatenated": false
+  },
+  "base_package": {
+    "name": "frozen_experiment_v1",
+    "official_participant_split_sha256": "c4bd93237ba40724493321ac8351aee82885e12fcb84181f84c3c24a7026acdc",
+    "supervised_anchor_sha256": "aba5126b2893ac6e2f5af57d8432c6f63b9d21d6bf7d923374e17e09e9908b92",
+    "targets_sha256": "a5fccffd7da91b3074b556204096ab7b7e9cd403718ab308cb8701ba3a6a9c76"
+  },
+  "output_package": {
+    "name": "frozen_experiment_v1_1",
+    "path": "data\\processed\\frozen_experiment_v1_1",
+    "manifest_sha256": "72e92e425a883b1d5167a1e3246494207f402622285bc681f9e3e01cb7b54928",
+    "inventory_sha256": "26fbddbdb9517201453ae36dca579a0249dba7b4122aa342f97e383bd604391b"
+  },
+  "policy": {
+    "name": "strict_date_interval_same_wave_previous_visit_v1",
+    "strict_date_recovered": {
+      "train": 256,
+      "validation": 55
+    },
+    "final_eligible": {
+      "train": 1426,
+      "validation": 301
+    },
+    "remaining_no_strict_winner": {
+      "train": 9,
+      "validation": 2
+    },
+    "remaining_not_before_current": {
+      "train": 4,
+      "validation": 1
+    }
+  },
+  "checks": {
+    "check_count": 27,
+    "failed_check_count": 0
+  },
+  "reconstruction_provenance": {
+    "historical_decision_id_preserved": true,
+    "historical_decision_id": "90fefe5ec34d49743612",
+    "current_policy_payload_sha256": "2752fe3a5f4bcfb25396f431f2be8a11086da857f97df6b11fb0a0ef4163c53e"
+  },
+  "privacy": {
+    "local_package_contains_identifiers": true,
+    "local_package_contains_clinical_dates": true,
+    "local_package_must_not_be_shared": true,
+    "safe_reports_contain_identifiers": false,
+    "safe_reports_contain_date_values": false,
+    "safe_reports_contain_medical_values": false,
+    "safe_reports_contain_predictions": false
+  }
+}

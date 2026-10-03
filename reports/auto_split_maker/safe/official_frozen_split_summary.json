@@ -1,0 +1,68 @@
+{
+  "script_version": "1.0.1",
+  "created_at_utc": "2026-10-02T23:19:19.834438+00:00",
+  "official_split_frozen": true,
+  "official_configuration": {
+    "weight_scheme": "uniform",
+    "all_criterion_weights": 1.0,
+    "distance_scale": "raw",
+    "split_aggregation": "0.5 mean + 0.5 worst split",
+    "categorical_distance": "Jensen-Shannon distance, base 2",
+    "numeric_distance": "one-dimensional Wasserstein-1 after global participant-level z-score standardization"
+  },
+  "population": {
+    "targets": 323,
+    "visits": 9600,
+    "participants": 2839
+  },
+  "selection": {
+    "candidate_id": 10185,
+    "seed": 42010184,
+    "score_final": 0.017438629073746,
+    "score_max_component": 0.0456957578465423,
+    "score_max_component_name": "modality_pattern_first",
+    "participant_counts": {
+      "train": 1987,
+      "validation": 426,
+      "test": 426
+    },
+    "visit_counts": {
+      "train": 6707,
+      "validation": 1445,
+      "test": 1448
+    },
+    "participant_overlaps": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "participant_profile_sha256": "79a7c2fd6f48f6a2643f3253dbc1b7acbe4afb04d2c4259dc99a1a5539633b67",
+    "split_mapping_sha256": "6e5d6b401e3a66f2bf03f5d278fb3db174f794313b215a3bbed4a4ce0803658d",
+    "target_catalog_sha256": "92b511bfc217551e952fa4f4334d8271cc7aa64675532e723d92840b8790ed8d"
+  },
+  "reproducibility": {
+    "n_candidates": 100000,
+    "master_seed": 42000000,
+    "candidate_seed_rule": "master_seed + candidate_id - 1",
+    "source_sha256": {
+      "DXSUM": "ef2fbab4fbf75b74fd73b44cbabd2b919c5df4da17532a7e8d03b0ca82b562a2",
+      "ADAS": "cccc6f695025ef60ff3bee72a713f8032c2a7cea6f6b95c02bea0de5499cbf36",
+      "CDR": "baa0dbc8e0242f1f32d8bd5137075344b0ffc19875d4de28ff355ddc0bfc8db6",
+      "FAQ": "7ad579068393b9dc2ffa7b1133b6040788178fdaa6b42906c7d0b8c5cb1c8787",
+      "MMSE": "0dd4934c1d49e64d13195791a47a6bac9a0b9eb6eb1320d7ad6a9f4437e4e09a",
+      "MOCA": "3e4447d8a7a2b61107dc3494ca68cb44036df27d32b4976b717db277502f42ca",
+      "NEUROBAT": "de092c4048cb338c0c703ead75bc17f4486f1cd79c1e0c4f94300a541d327c77",
+      "PTDEMOG": "ce8ea1d3b6de2bac28bcb2bde3f71032eec73b26241629ed4f030615906e2bb4",
+      "APOERES": "2a00213aedf5e699f2e7a148ef1316b8a3e84835ee358a2daaacc9ff027c9745",
+      "UCSFFSX7": "1d644ac47d3ec568d47845e45da7eaa234c9d1d2ba3c2e35be4a95c942761620"
+    },
+    "reconstruction_script_sha256": "50dadbcedf9de6c2ff64af0cb79ee84fa706b1abe52e2a31fdbc8480c145c1f4"
+  },
+  "privacy": {
+    "contains_individual_records": false,
+    "contains_participant_identifiers": false,
+    "contains_visit_identifiers": false,
+    "contains_medical_values": false,
+    "contains_only_aggregate_counts_and_global_hashes": true
+  }
+}

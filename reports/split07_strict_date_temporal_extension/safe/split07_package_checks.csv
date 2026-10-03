@@ -1,0 +1,6 @@
+check,passed,detail
+base_inventory_verified,True,files=63
+base_files_unchanged_in_v1_1,True,files=65
+historical_temporal_policy_id_preserved,True,decision_id=90fefe5ec34d49743612
+new_inventory_written,True,inventory_rows=69
+new_manifest_written,True,manifest staged
