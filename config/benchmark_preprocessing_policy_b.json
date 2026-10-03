@@ -1,0 +1,60 @@
+{
+  "stage": "benchmark06b",
+  "script_version": "0.1.0",
+  "preprocessing_decision_id": "1e11cdf3422c59189584",
+  "scenario_decision_id": "f7cf7c5b0378b097013a",
+  "temporal_policy_decision_id": "90fefe5ec34d49743612",
+  "policy": {
+    "policy_version": "2.0.0-crosschecked-b",
+    "semantic_transforms": "frozen BENCHMARK04B/A06 transform registry",
+    "support": {
+      "threshold_participants": 50,
+      "application": "per scenario and temporal block on train",
+      "unit": "distinct train participants with original feature observed",
+      "performed_before_encoding": true
+    },
+    "numeric": {
+      "imputation": "train median",
+      "scaling": "StandardScaler fit on train after imputation",
+      "missing_indicator": "one indicator for every retained numeric feature; train-zero constants removed later"
+    },
+    "binary": {
+      "allowed_values": [
+        0,
+        1
+      ],
+      "imputation": "train median",
+      "scaling": "none",
+      "missing_indicator": "one indicator for every retained binary feature; train-zero constants removed later"
+    },
+    "categorical": {
+      "missing": "explicit __MISSING__ category",
+      "encoding": "OneHotEncoder fit on train",
+      "validation_unknown": "ignored and counted"
+    },
+    "multi_response": {
+      "encoding": "multi-hot vocabulary fit on train",
+      "missing": "explicit __MISSING__ column",
+      "validation_unknown": "ignored after audit; __UNKNOWN__ train-constant column removed by zero-variance filter"
+    },
+    "temporal_source_exclusions": {
+      "scope": "longitudinal previous visit-level source blocks",
+      "rule": "BENCHMARK05B flags collected on or after current target MRI are set missing",
+      "application_order": "before modality presence, semantic transform, imputation and encoding",
+      "cross_stage_hash_and_flag_validation": true
+    },
+    "modality": {
+      "indicator": "one modality_present indicator per source-backed block; no presence indicator for derived covariates",
+      "computed": "after temporal source exclusions and before support imputation"
+    },
+    "variance_filter": {
+      "rule": "remove non-finite or zero-range encoded columns using train only",
+      "validation_refit": false
+    },
+    "test": {
+      "materialized": false,
+      "used": false,
+      "policy": "same frozen state will be applied only after final model lock"
+    }
+  }
+}

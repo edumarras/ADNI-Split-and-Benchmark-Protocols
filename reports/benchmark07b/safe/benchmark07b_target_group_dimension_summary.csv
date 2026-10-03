@@ -1,0 +1,3 @@
+target_group,reference_scenario,scenarios,train_rows,validation_rows,train_participants,validation_participants,full_dimensions,pca90_components,pca90_cumulative_explained_variance,output_dtype
+snapshot_all,snapshot_all,snapshot_all,6707,1445,1987,426,323,116,0.9003264719452745,float32
+matched_pair,snapshot_matched_last,snapshot_matched_last;longitudinal_previous_last,1419,299,1419,299,323,109,0.9004248702868054,float32

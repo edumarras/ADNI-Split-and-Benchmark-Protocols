@@ -1,0 +1,4 @@
+scenario,encoded_columns_before_variance,zero_variance_columns_removed,encoded_columns_final
+snapshot_all,667,7,660
+snapshot_matched_last,663,7,656
+longitudinal_previous_last,1260,12,1248

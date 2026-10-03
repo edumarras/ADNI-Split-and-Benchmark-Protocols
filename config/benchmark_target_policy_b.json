@@ -1,0 +1,55 @@
+{
+  "stage": "benchmark07b",
+  "script_version": "0.1.0",
+  "target_policy_version": "1.1.0-crosschecked-b",
+  "target_decision_id": "a35b0846c0755c3196ff",
+  "upstream_preprocessing_decision_id": "1e11cdf3422c59189584",
+  "upstream_scenario_decision_id": "f7cf7c5b0378b097013a",
+  "upstream_temporal_policy_decision_id": "90fefe5ec34d49743612",
+  "policy": {
+    "policy_version": "1.1.0-crosschecked-b",
+    "target_count": 323,
+    "target_missingness": "forbidden; no target imputation",
+    "fit_groups": {
+      "snapshot_all": {
+        "reference_scenario": "snapshot_all",
+        "fit_rows": "snapshot_all train rows only"
+      },
+      "matched_pair": {
+        "reference_scenario": "snapshot_matched_last",
+        "fit_rows": "matched train rows only",
+        "shared_by": [
+          "snapshot_matched_last",
+          "longitudinal_previous_last"
+        ],
+        "reason": "paired scenarios have identical current target rows"
+      }
+    },
+    "full": {
+      "representation": "featurewise standardized original 323-dimensional target",
+      "scaler": "StandardScaler",
+      "fit": "train only within target group",
+      "validation_refit": false
+    },
+    "pca90": {
+      "input": "standardized Full target",
+      "estimator": "sklearn.decomposition.PCA",
+      "variance_threshold": 0.9,
+      "svd_solver": "full",
+      "whiten": false,
+      "fit": "train only within target group",
+      "validation_refit": false,
+      "component_rule": "smallest component count reaching >= 0.90 cumulative train explained variance"
+    },
+    "inverse_transform": {
+      "pca_to_standardized_full": "PCA.inverse_transform",
+      "standardized_full_to_raw": "StandardScaler.inverse_transform"
+    },
+    "test": {
+      "values_parsed": false,
+      "materialized": false,
+      "policy": "apply frozen group state only after final model/configuration lock"
+    },
+    "output_dtype": "float32"
+  }
+}

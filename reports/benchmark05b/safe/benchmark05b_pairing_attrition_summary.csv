@@ -1,0 +1,13 @@
+split,status,reason,participant_count,development_participant_count,participant_pct
+train,eligible,eligible_strict_date_interval_winner,256,1987,12.883744338198289
+train,eligible,eligible_unique_previous_visit,1163,1987,58.53044791142426
+train,excluded,ambiguous_same_wave_no_strict_interval_winner,9,1987,0.4529441368897836
+train,excluded,no_semantically_authorized_previous_input_after_crosscheck,7,1987,0.3522898842476095
+train,excluded,only_unknown_or_non_earlier_history,548,1987,27.579265223955712
+train,excluded,strict_latest_not_fully_before_current,4,1987,0.20130850528434827
+validation,eligible,eligible_strict_date_interval_winner,55,426,12.910798122065728
+validation,eligible,eligible_unique_previous_visit,244,426,57.27699530516432
+validation,excluded,ambiguous_same_wave_no_strict_interval_winner,2,426,0.4694835680751174
+validation,excluded,no_semantically_authorized_previous_input_after_crosscheck,2,426,0.4694835680751174
+validation,excluded,only_unknown_or_non_earlier_history,122,426,28.63849765258216
+validation,excluded,strict_latest_not_fully_before_current,1,426,0.2347417840375587

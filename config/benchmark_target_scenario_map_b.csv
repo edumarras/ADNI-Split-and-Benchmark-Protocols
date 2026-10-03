@@ -1,0 +1,4 @@
+scenario,target_group,reference_scenario,full_representation,pca90_representation,target_decision_id,test_materialized
+snapshot_all,snapshot_all,snapshot_all,Y_full,Y_pca90,a35b0846c0755c3196ff,False
+snapshot_matched_last,matched_pair,snapshot_matched_last,Y_full,Y_pca90,a35b0846c0755c3196ff,False
+longitudinal_previous_last,matched_pair,snapshot_matched_last,Y_full,Y_pca90,a35b0846c0755c3196ff,False

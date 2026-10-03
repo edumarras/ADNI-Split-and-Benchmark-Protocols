@@ -1,0 +1,371 @@
+{
+  "age_at_target": {
+    "availability_counts": [
+      {
+        "age_observed_rows": 6707,
+        "rows": 6707,
+        "scenario": "snapshot_all",
+        "split": "train"
+      },
+      {
+        "age_observed_rows": 1445,
+        "rows": 1445,
+        "scenario": "snapshot_all",
+        "split": "validation"
+      },
+      {
+        "age_observed_rows": 1419,
+        "rows": 1419,
+        "scenario": "snapshot_matched_last",
+        "split": "train"
+      },
+      {
+        "age_observed_rows": 299,
+        "rows": 299,
+        "scenario": "snapshot_matched_last",
+        "split": "validation"
+      },
+      {
+        "age_observed_rows": 1419,
+        "rows": 1419,
+        "scenario": "longitudinal_previous_last",
+        "split": "train"
+      },
+      {
+        "age_observed_rows": 299,
+        "rows": 299,
+        "scenario": "longitudinal_previous_last",
+        "split": "validation"
+      }
+    ],
+    "formula": "calendar_year(current_target_mri_examdate)-baseline_birth_year",
+    "precision": "calendar_year",
+    "previous_age_feature_created": false,
+    "raw_birth_fields_exposed": false
+  },
+  "artifacts": {
+    "local_artifact_hashes": {
+      "LOCAL_ONLY_age_at_target_derivation.csv.gz": "2c28184c4994cda63849f247328337a118887fff05fa26a543d13f9a7ceedbe3",
+      "development_visit_availability_timeline.csv.gz": "e66ad844fd846a76982581c791dd5d2e211f02074bef112f40e47f43fae66aed",
+      "longitudinal_previous_last_development_pairs.csv.gz": "92596f56081e8309c613eb519c67f0ae09bd676769ff7b936cf819cf9edebc00",
+      "pairing_exclusions.csv.gz": "e6fe2942cae1b2be2ae58a091d7e7940ef39c7d62d7e9ef8a13909e00251c5a3",
+      "snapshot_all_development_anchor.csv.gz": "08c372239ad46e396d04b3757576280e0efc9148be54e0747f3ab7afd8eab8da",
+      "snapshot_matched_last_development_anchor.csv.gz": "b0738f6e4bb2bd30dcdba8ca28ad3e59c477f9be0a86055b715ef868692169dc"
+    },
+    "local_output_directory": "data\\processed\\local_only\\benchmark05b_scenarios",
+    "scenario_definitions": "config\\benchmark_scenario_definitions_b.json",
+    "scenario_definitions_sha256": "05311b1ddb46ecf01b70ea8ad08d13181aff13ac89fb4d3cee52b52da3f8a6ea",
+    "scenario_lock": "config\\benchmark_scenario_lock_b.json",
+    "scenario_lock_sha256": "f5ec94f8522ae74d9b82c9f8a480fc20a49087e28c8d13f3c92213da72282d09",
+    "scenario_support_manifest": "config\\benchmark_scenario_support_manifest_b.csv",
+    "scenario_support_manifest_sha256": "448f4521e5207116fa131bc36d622f82f2840c87e088eed543c0a45f7055f756",
+    "temporal_exclusion_audit_summary_sha256": "94c42837193e7b23eb825310b423d7668cfeff083a09726291578fb112e5c7a7",
+    "temporal_exclusion_local_manifest_sha256": "fa9bdd7990ef105035230d041fb22887c06347d4fa7672f679726b953698f3f2"
+  },
+  "benchmark05b_script_version": "0.1.0",
+  "check_count": 183,
+  "created_at_utc": "2026-10-03T15:30:42.112136+00:00",
+  "design_features": {
+    "age_at_target_current_visit_only": true,
+    "longitudinal_gap_months": true,
+    "modality_presence_indicators": "one indicator per relevant source and temporal block; effective constants removed later on fit",
+    "pair_removed_if_no_safe_previous_input_remains": true,
+    "participant_static_sources_not_duplicated": [
+      "PTDEMOG",
+      "APOERES"
+    ],
+    "strict_date_gap_days_audited": true,
+    "temporally_unsafe_previous_source_blocks_set_missing": true
+  },
+  "environment": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.15"
+  },
+  "failed_check_count": 0,
+  "fatal_error": null,
+  "methodological_note": "Matched static and longitudinal scenarios share identical current participants, visits and targets. Previous visits are selected once per participant from semantically authorized non-MRI history, with strict protocol ordering and no modality-specific fallback. Any previous source block collected on or after the current target MRI is represented as missing before support calculation. AGE_AT_TARGET is derived locally for the current target visit only from baseline birth-year metadata and the current MRI EXAMDATE.",
+  "pairing_attrition": [
+    {
+      "development_participant_count": 1987,
+      "participant_count": 256,
+      "participant_pct": 12.883744338198289,
+      "reason": "eligible_strict_date_interval_winner",
+      "split": "train",
+      "status": "eligible"
+    },
+    {
+      "development_participant_count": 1987,
+      "participant_count": 1163,
+      "participant_pct": 58.53044791142426,
+      "reason": "eligible_unique_previous_visit",
+      "split": "train",
+      "status": "eligible"
+    },
+    {
+      "development_participant_count": 1987,
+      "participant_count": 9,
+      "participant_pct": 0.4529441368897836,
+      "reason": "ambiguous_same_wave_no_strict_interval_winner",
+      "split": "train",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 1987,
+      "participant_count": 7,
+      "participant_pct": 0.3522898842476095,
+      "reason": "no_semantically_authorized_previous_input_after_crosscheck",
+      "split": "train",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 1987,
+      "participant_count": 548,
+      "participant_pct": 27.579265223955712,
+      "reason": "only_unknown_or_non_earlier_history",
+      "split": "train",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 1987,
+      "participant_count": 4,
+      "participant_pct": 0.20130850528434827,
+      "reason": "strict_latest_not_fully_before_current",
+      "split": "train",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 55,
+      "participant_pct": 12.910798122065728,
+      "reason": "eligible_strict_date_interval_winner",
+      "split": "validation",
+      "status": "eligible"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 244,
+      "participant_pct": 57.27699530516432,
+      "reason": "eligible_unique_previous_visit",
+      "split": "validation",
+      "status": "eligible"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 2,
+      "participant_pct": 0.4694835680751174,
+      "reason": "ambiguous_same_wave_no_strict_interval_winner",
+      "split": "validation",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 2,
+      "participant_pct": 0.4694835680751174,
+      "reason": "no_semantically_authorized_previous_input_after_crosscheck",
+      "split": "validation",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 122,
+      "participant_pct": 28.63849765258216,
+      "reason": "only_unknown_or_non_earlier_history",
+      "split": "validation",
+      "status": "excluded"
+    },
+    {
+      "development_participant_count": 426,
+      "participant_count": 1,
+      "participant_pct": 0.2347417840375587,
+      "reason": "strict_latest_not_fully_before_current",
+      "split": "validation",
+      "status": "excluded"
+    }
+  ],
+  "privacy": {
+    "individualized_artifacts_are_local_only": true,
+    "local_artifacts_must_not_be_shared": true,
+    "safe_outputs_contain_medical_values": false,
+    "safe_outputs_contain_participant_identifiers": false,
+    "safe_outputs_contain_predictions": false,
+    "safe_outputs_contain_visit_identifiers": false
+  },
+  "scenario_build_passed": true,
+  "scenario_counts": [
+    {
+      "current_target_visits": 6707,
+      "one_row_per_participant": false,
+      "participants": 1987,
+      "previous_visits": 0,
+      "rows": 6707,
+      "scenario": "snapshot_all",
+      "split": "train",
+      "test_rows_used": 0
+    },
+    {
+      "current_target_visits": 1445,
+      "one_row_per_participant": false,
+      "participants": 426,
+      "previous_visits": 0,
+      "rows": 1445,
+      "scenario": "snapshot_all",
+      "split": "validation",
+      "test_rows_used": 0
+    },
+    {
+      "current_target_visits": 1419,
+      "one_row_per_participant": true,
+      "participants": 1419,
+      "previous_visits": 0,
+      "rows": 1419,
+      "scenario": "snapshot_matched_last",
+      "split": "train",
+      "test_rows_used": 0
+    },
+    {
+      "current_target_visits": 299,
+      "one_row_per_participant": true,
+      "participants": 299,
+      "previous_visits": 0,
+      "rows": 299,
+      "scenario": "snapshot_matched_last",
+      "split": "validation",
+      "test_rows_used": 0
+    },
+    {
+      "current_target_visits": 1419,
+      "one_row_per_participant": true,
+      "participants": 1419,
+      "previous_visits": 1419,
+      "rows": 1419,
+      "scenario": "longitudinal_previous_last",
+      "split": "train",
+      "test_rows_used": 0
+    },
+    {
+      "current_target_visits": 299,
+      "one_row_per_participant": true,
+      "participants": 299,
+      "previous_visits": 299,
+      "rows": 299,
+      "scenario": "longitudinal_previous_last",
+      "split": "validation",
+      "test_rows_used": 0
+    }
+  ],
+  "scenario_decision_id": "f7cf7c5b0378b097013a",
+  "scope": {
+    "age_at_target_current_visit_only": true,
+    "age_at_target_materialized": true,
+    "development_splits_used": [
+      "train",
+      "validation"
+    ],
+    "models_trained": false,
+    "participant_split_changed": false,
+    "raw_birth_fields_exposed_as_predictors": false,
+    "same_wave_visits_concatenated": false,
+    "support_computed_from_split": "train",
+    "support_recomputed_per_scenario_and_block": true,
+    "support_threshold_participants": 50,
+    "target_values_loaded": false,
+    "temporal_policy_decision_id": "90fefe5ec34d49743612",
+    "temporal_source_exclusions_applied": true,
+    "temporal_source_exclusions_before_support": true,
+    "test_scenarios_materialized": false,
+    "test_values_used": false
+  },
+  "stage": "benchmark05b",
+  "support_retained_counts": [
+    {
+      "block": "current_derived",
+      "retained_feature_instances": 1,
+      "scenario": "longitudinal_previous_last"
+    },
+    {
+      "block": "current_visit",
+      "retained_feature_instances": 200,
+      "scenario": "longitudinal_previous_last"
+    },
+    {
+      "block": "participant_static",
+      "retained_feature_instances": 10,
+      "scenario": "longitudinal_previous_last"
+    },
+    {
+      "block": "previous_visit",
+      "retained_feature_instances": 201,
+      "scenario": "longitudinal_previous_last"
+    },
+    {
+      "block": "current_derived",
+      "retained_feature_instances": 1,
+      "scenario": "snapshot_all"
+    },
+    {
+      "block": "current_visit",
+      "retained_feature_instances": 201,
+      "scenario": "snapshot_all"
+    },
+    {
+      "block": "participant_static",
+      "retained_feature_instances": 10,
+      "scenario": "snapshot_all"
+    },
+    {
+      "block": "current_derived",
+      "retained_feature_instances": 1,
+      "scenario": "snapshot_matched_last"
+    },
+    {
+      "block": "current_visit",
+      "retained_feature_instances": 200,
+      "scenario": "snapshot_matched_last"
+    },
+    {
+      "block": "participant_static",
+      "retained_feature_instances": 10,
+      "scenario": "snapshot_matched_last"
+    }
+  ],
+  "temporal_gap_summary": [
+    {
+      "gap_months_max": 72.0,
+      "gap_months_mean": 14.39323467230444,
+      "gap_months_median": 12.0,
+      "gap_months_min": 3.0,
+      "gap_months_q25": 6.0,
+      "gap_months_q75": 18.0,
+      "pair_count": 1419,
+      "split": "train",
+      "strictly_positive": true
+    },
+    {
+      "gap_months_max": 60.0,
+      "gap_months_mean": 14.22742474916388,
+      "gap_months_median": 12.0,
+      "gap_months_min": 3.0,
+      "gap_months_q25": 6.0,
+      "gap_months_q75": 18.0,
+      "pair_count": 299,
+      "split": "validation",
+      "strictly_positive": true
+    }
+  ],
+  "temporal_source_exclusions": {
+    "audit_passed": true,
+    "audit_script_version": "0.1.1",
+    "audit_stage": "auditA05_temporal_modality_exclusions",
+    "individualized_manifest_local_only": true,
+    "participant_split_changed": false,
+    "policy": "set affected previous source blocks missing before support, availability and preprocessing"
+  },
+  "upstream": {
+    "schema_decision_id": "af33ab072e44c35c04b442a5",
+    "semantic_exclude_count": 150,
+    "semantic_include_count": 212,
+    "support_threshold": 50
+  }
+}

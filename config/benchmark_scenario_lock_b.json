@@ -1,0 +1,67 @@
+{
+  "age_at_target": {
+    "birth_metadata_sha256": "0ece8a7e36f3a194be520cb4907bc4c984f85cbd20278c7a059116fd6d0d15a4",
+    "current_visit_only": true,
+    "derivation": "calendar_year(current_target_mri_examdate)-baseline_birth_year",
+    "materialized": true,
+    "mri_date_source_sha256": "941a92a851708cb0f6426cb9765d5123b45e40c716c905dfc2d486b710a459c7",
+    "previous_age_created": false,
+    "raw_birth_fields_exposed": false
+  },
+  "created_at_utc": "2026-10-03T15:30:42.112136+00:00",
+  "development_splits": [
+    "train",
+    "validation"
+  ],
+  "local_artifact_hashes": {
+    "LOCAL_ONLY_age_at_target_derivation.csv.gz": "2c28184c4994cda63849f247328337a118887fff05fa26a543d13f9a7ceedbe3",
+    "development_visit_availability_timeline.csv.gz": "e66ad844fd846a76982581c791dd5d2e211f02074bef112f40e47f43fae66aed",
+    "longitudinal_previous_last_development_pairs.csv.gz": "92596f56081e8309c613eb519c67f0ae09bd676769ff7b936cf819cf9edebc00",
+    "pairing_exclusions.csv.gz": "e6fe2942cae1b2be2ae58a091d7e7940ef39c7d62d7e9ef8a13909e00251c5a3",
+    "snapshot_all_development_anchor.csv.gz": "08c372239ad46e396d04b3757576280e0efc9148be54e0747f3ab7afd8eab8da",
+    "snapshot_matched_last_development_anchor.csv.gz": "b0738f6e4bb2bd30dcdba8ca28ad3e59c477f9be0a86055b715ef868692169dc"
+  },
+  "lock_version": "2.0.0-crosschecked-b",
+  "methodological_commitment": "Do not change scenario eligibility, current/previous selection, support application or ambiguity policy after test inspection.",
+  "official_artifact_hashes": {
+    "benchmark_scenario_definitions_b.json": "05311b1ddb46ecf01b70ea8ad08d13181aff13ac89fb4d3cee52b52da3f8a6ea",
+    "benchmark_scenario_support_manifest_b.csv": "448f4521e5207116fa131bc36d622f82f2840c87e088eed543c0a45f7055f756"
+  },
+  "scenario_decision_id": "f7cf7c5b0378b097013a",
+  "scenario_definition_version": "2.0.0-crosschecked-b",
+  "script_version": "0.1.0",
+  "stage": "benchmark05b",
+  "supersedes_scenario_decision_id": null,
+  "support_threshold_participants": 50,
+  "temporal_source_exclusions": {
+    "applied_before_support_and_transform_audit": true,
+    "audit_stage": "auditA05_temporal_modality_exclusions",
+    "audit_summary_sha256": "94c42837193e7b23eb825310b423d7668cfeff083a09726291578fb112e5c7a7",
+    "local_manifest_sha256": "fa9bdd7990ef105035230d041fb22887c06347d4fa7672f679726b953698f3f2",
+    "pair_removed_only_if_no_safe_previous_input_remains": true,
+    "participant_split_changed": false
+  },
+  "test_materialized": false,
+  "test_used_for_scenario_development": false,
+  "upstream_hashes": {
+    "age_metadata_sha256": "0ece8a7e36f3a194be520cb4907bc4c984f85cbd20278c7a059116fd6d0d15a4",
+    "anchor_sha256": "aba5126b2893ac6e2f5af57d8432c6f63b9d21d6bf7d923374e17e09e9908b92",
+    "auditA05_local_manifest_sha256": "fa9bdd7990ef105035230d041fb22887c06347d4fa7672f679726b953698f3f2",
+    "auditA05_summary_sha256": "94c42837193e7b23eb825310b423d7668cfeff083a09726291578fb112e5c7a7",
+    "benchmark01_summary_sha256": "faa9ff81d6bb2b4bc0fb8c83e9ec0eddfe07490dc1ebefced2ec168a91e77f14",
+    "benchmark04b_summary_sha256": "9189691fcdf77e93a40571330aa3c32f4871598b81b85f4da2e1f0e45a49583b",
+    "benchmark05b_script_sha256": "b37551463ca3e4a81a65a443c3f0b8a076d4e070bedbc1fd8f1db2139f90e2c1",
+    "crosschecked_manifest_sha256": "5cd1ecdccc4dfb4b6b6e44a14cd23ff732aeb96a5939ff33fa76a8eaf1ef0d68",
+    "mri_canonical_sha256": "941a92a851708cb0f6426cb9765d5123b45e40c716c905dfc2d486b710a459c7",
+    "official_schema_sha256": "464cb2f311db75514fc034f7d590f21b19f36f367d1e503fdfb1a3a9d808f0a3",
+    "official_transforms_sha256": "876001a552f811e6b1754627a6cf325f3e0215a0c2ff78b5929bff99567d5fee",
+    "package_manifest_sha256": "72e92e425a883b1d5167a1e3246494207f402622285bc681f9e3e01cb7b54928",
+    "schema_lock_sha256": "3a8bc9a502f7f6c1fcf1614281f675db9bdd75fbe7b634b9d82e5fa419679422",
+    "support_policy_sha256": "055b6e86ed53d2932e014c564e1985559f5982b6a7d52361eb1bdf88d203a742",
+    "target_keys_table_sha256": "a5fccffd7da91b3074b556204096ab7b7e9cd403718ab308cb8701ba3a6a9c76",
+    "temporal_pairing_reference_sha256": "7550bd5bef1ff157ee838230e0809f17471d3bb86c15481931b2eb4ec3f32d00",
+    "temporal_policy_lock_sha256": "57ecbcc765099daaf1e9bbac86954c5104b8f96f4c8715f90eec24db1e072e9b"
+  },
+  "upstream_schema_decision_id": "af33ab072e44c35c04b442a5",
+  "upstream_temporal_policy_decision_id": "90fefe5ec34d49743612"
+}

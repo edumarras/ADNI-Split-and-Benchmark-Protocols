@@ -1,0 +1,231 @@
+{
+  "stage": "benchmark06b",
+  "script_version": "0.1.0",
+  "preprocessing_version": "2.0.0-crosschecked-b",
+  "created_at_utc": "2026-10-03T15:54:15.418694+00:00",
+  "preprocessing_passed": true,
+  "preprocessing_decision_id": "1e11cdf3422c59189584",
+  "scenario_decision_id": "f7cf7c5b0378b097013a",
+  "temporal_policy_decision_id": "90fefe5ec34d49743612",
+  "check_count": 900,
+  "failed_check_count": 0,
+  "fatal_error": null,
+  "scope": {
+    "fit_split": "train",
+    "validation_transformed_without_refit": true,
+    "test_values_used": false,
+    "test_materialized": false,
+    "targets_loaded": false,
+    "models_trained": false,
+    "support_threshold_participants": 50,
+    "temporal_source_exclusions_applied_before_preprocessing": true,
+    "temporal_exclusion_flags_cross_validated": true,
+    "participant_split_changed": false,
+    "age_at_target_materialized_upstream": true,
+    "age_at_target_preprocessed_as_current_numeric_covariate": true,
+    "previous_age_feature_created": false,
+    "raw_birth_fields_exposed": false
+  },
+  "policy": {
+    "policy_version": "2.0.0-crosschecked-b",
+    "semantic_transforms": "frozen BENCHMARK04B/A06 transform registry",
+    "support": {
+      "threshold_participants": 50,
+      "application": "per scenario and temporal block on train",
+      "unit": "distinct train participants with original feature observed",
+      "performed_before_encoding": true
+    },
+    "numeric": {
+      "imputation": "train median",
+      "scaling": "StandardScaler fit on train after imputation",
+      "missing_indicator": "one indicator for every retained numeric feature; train-zero constants removed later"
+    },
+    "binary": {
+      "allowed_values": [
+        0,
+        1
+      ],
+      "imputation": "train median",
+      "scaling": "none",
+      "missing_indicator": "one indicator for every retained binary feature; train-zero constants removed later"
+    },
+    "categorical": {
+      "missing": "explicit __MISSING__ category",
+      "encoding": "OneHotEncoder fit on train",
+      "validation_unknown": "ignored and counted"
+    },
+    "multi_response": {
+      "encoding": "multi-hot vocabulary fit on train",
+      "missing": "explicit __MISSING__ column",
+      "validation_unknown": "ignored after audit; __UNKNOWN__ train-constant column removed by zero-variance filter"
+    },
+    "temporal_source_exclusions": {
+      "scope": "longitudinal previous visit-level source blocks",
+      "rule": "BENCHMARK05B flags collected on or after current target MRI are set missing",
+      "application_order": "before modality presence, semantic transform, imputation and encoding",
+      "cross_stage_hash_and_flag_validation": true
+    },
+    "modality": {
+      "indicator": "one modality_present indicator per source-backed block; no presence indicator for derived covariates",
+      "computed": "after temporal source exclusions and before support imputation"
+    },
+    "variance_filter": {
+      "rule": "remove non-finite or zero-range encoded columns using train only",
+      "validation_refit": false
+    },
+    "test": {
+      "materialized": false,
+      "used": false,
+      "policy": "same frozen state will be applied only after final model lock"
+    }
+  },
+  "scenario_dimensions": [
+    {
+      "scenario": "snapshot_all",
+      "train_rows": 6707,
+      "validation_rows": 1445,
+      "train_participants": 1987,
+      "validation_participants": 426,
+      "original_model_features": 220,
+      "encoded_columns_before_variance": 667,
+      "encoded_columns_final": 660,
+      "train_nnz": 1929326,
+      "validation_nnz": 414375,
+      "train_density": 0.43584631163280335,
+      "validation_density": 0.4344919786096257
+    },
+    {
+      "scenario": "snapshot_matched_last",
+      "train_rows": 1419,
+      "validation_rows": 299,
+      "train_participants": 1419,
+      "validation_participants": 299,
+      "original_model_features": 219,
+      "encoded_columns_before_variance": 663,
+      "encoded_columns_final": 656,
+      "train_nnz": 358735,
+      "validation_nnz": 74779,
+      "train_density": 0.38537853005379946,
+      "validation_density": 0.3812454115343829
+    },
+    {
+      "scenario": "longitudinal_previous_last",
+      "train_rows": 1419,
+      "validation_rows": 299,
+      "train_participants": 1419,
+      "validation_participants": 299,
+      "original_model_features": 427,
+      "encoded_columns_before_variance": 1260,
+      "encoded_columns_final": 1248,
+      "train_nnz": 713490,
+      "validation_nnz": 149433,
+      "train_density": 0.402894102022009,
+      "validation_density": 0.4004614741445845
+    }
+  ],
+  "zero_variance": [
+    {
+      "scenario": "snapshot_all",
+      "encoded_columns_before_variance": 667,
+      "zero_variance_columns_removed": 7,
+      "encoded_columns_final": 660
+    },
+    {
+      "scenario": "snapshot_matched_last",
+      "encoded_columns_before_variance": 663,
+      "zero_variance_columns_removed": 7,
+      "encoded_columns_final": 656
+    },
+    {
+      "scenario": "longitudinal_previous_last",
+      "encoded_columns_before_variance": 1260,
+      "zero_variance_columns_removed": 12,
+      "encoded_columns_final": 1248
+    }
+  ],
+  "unknown_validation": [
+    {
+      "scenario": "snapshot_all",
+      "unknown_kind": "categorical_value",
+      "features_with_unknown": 1,
+      "unknown_occurrences": 1,
+      "rows_with_unknown": NaN
+    },
+    {
+      "scenario": "snapshot_all",
+      "unknown_kind": "multi_response_token",
+      "features_with_unknown": 0,
+      "unknown_occurrences": 0,
+      "rows_with_unknown": 0.0
+    },
+    {
+      "scenario": "snapshot_matched_last",
+      "unknown_kind": "categorical_value",
+      "features_with_unknown": 2,
+      "unknown_occurrences": 3,
+      "rows_with_unknown": NaN
+    },
+    {
+      "scenario": "snapshot_matched_last",
+      "unknown_kind": "multi_response_token",
+      "features_with_unknown": 0,
+      "unknown_occurrences": 0,
+      "rows_with_unknown": 0.0
+    },
+    {
+      "scenario": "longitudinal_previous_last",
+      "unknown_kind": "categorical_value",
+      "features_with_unknown": 12,
+      "unknown_occurrences": 14,
+      "rows_with_unknown": NaN
+    },
+    {
+      "scenario": "longitudinal_previous_last",
+      "unknown_kind": "multi_response_token",
+      "features_with_unknown": 0,
+      "unknown_occurrences": 0,
+      "rows_with_unknown": 0.0
+    }
+  ],
+  "artifacts": {
+    "local_output_directory": "data\\processed\\local_only\\benchmark06b_preprocessed_inputs",
+    "local_artifact_inventory_sha256": "eddf1577b0a879c3832a9481a26ad51981f2ecd85c1ba7d02ff17b5e859356bb",
+    "preprocessing_policy": "config\\benchmark_preprocessing_policy_b.json",
+    "preprocessing_policy_sha256": "1cf85d3a9e4ba5b17b9c023e87ed673f3ca15bb218e9ad678c72fce1b2096c3c",
+    "preprocessing_manifest": "config\\benchmark_preprocessing_manifest_b.csv",
+    "preprocessing_manifest_sha256": "06438390f829de50e8430fe220c29dff5c44df638e3541eaa11f631cbcd5b216",
+    "preprocessing_lock": "config\\benchmark_preprocessing_lock_b.json",
+    "preprocessing_lock_sha256": "90e6f6b35eca5dc1df52cab9fbfb22c2e25daf992fa63c4a92f2b5f80d63eb90"
+  },
+  "upstream_hashes": {
+    "benchmark05b_script_sha256": "b37551463ca3e4a81a65a443c3f0b8a076d4e070bedbc1fd8f1db2139f90e2c1",
+    "benchmark05b_summary_sha256": "fe09b73edcd7cd09fac914ccb854bf05544ad851c6e7bbd6eadc4cd8116c1dc9",
+    "official_schema_sha256": "464cb2f311db75514fc034f7d590f21b19f36f367d1e503fdfb1a3a9d808f0a3",
+    "official_transforms_sha256": "876001a552f811e6b1754627a6cf325f3e0215a0c2ff78b5929bff99567d5fee",
+    "support_policy_sha256": "055b6e86ed53d2932e014c564e1985559f5982b6a7d52361eb1bdf88d203a742",
+    "schema_lock_sha256": "3a8bc9a502f7f6c1fcf1614281f675db9bdd75fbe7b634b9d82e5fa419679422",
+    "scenario_definitions_sha256": "05311b1ddb46ecf01b70ea8ad08d13181aff13ac89fb4d3cee52b52da3f8a6ea",
+    "scenario_support_manifest_sha256": "448f4521e5207116fa131bc36d622f82f2840c87e088eed543c0a45f7055f756",
+    "scenario_lock_sha256": "f5ec94f8522ae74d9b82c9f8a480fc20a49087e28c8d13f3c92213da72282d09",
+    "auditA05_summary_sha256": "94c42837193e7b23eb825310b423d7668cfeff083a09726291578fb112e5c7a7",
+    "auditA05_local_manifest_sha256": "fa9bdd7990ef105035230d041fb22887c06347d4fa7672f679726b953698f3f2"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "privacy": {
+    "safe_outputs_contain_participant_identifiers": false,
+    "safe_outputs_contain_visit_identifiers": false,
+    "safe_outputs_contain_category_or_token_values": false,
+    "safe_outputs_contain_medical_values": false,
+    "safe_outputs_contain_predictions": false,
+    "individualized_artifacts_are_local_only": true,
+    "local_artifacts_must_not_be_shared": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "stage": "benchmark08b",
+  "script_version": "0.1.0",
+  "model_policy_version": "1.0.0",
+  "model_grid_decision_id": "f2fe96bf18b9d1e717b6",
+  "fit_split": "train",
+  "evaluation_split": "validation",
+  "primary_metric": "participant_macro_rmse",
+  "primary_metric_definition": "For each row, average squared error over 323 standardized targets; average row MSE within participant; take participant RMSE; average participants.",
+  "eligibility": "converged configurations only when at least one converged configuration exists",
+  "tie_breakers": [
+    "participant_macro_mae",
+    "configuration_order"
+  ],
+  "pca90_prediction_evaluation": "PCA.inverse_transform to standardized Full",
+  "extra_trees": "five-seed prediction ensemble for configuration selection",
+  "boundary_rule": "Flag a boundary winner for review, but do not expand any grid after observing validation results.",
+  "test_usage": "none in BENCHMARK08B",
+  "final_lock": "Selected configurations are candidates only. A later explicit lock is required before refit train+validation and one-time test opening."
+}

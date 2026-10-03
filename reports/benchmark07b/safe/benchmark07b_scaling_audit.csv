@@ -1,0 +1,3 @@
+target_group,train_rows,target_dimensions,zero_variance_target_dimensions,standardized_train_mean_max_abs,standardized_train_std_max_abs_error,scaler_scale_min,scaler_scale_max
+snapshot_all,6707,323,0,7.913355870884208e-14,1.1102230246251565e-14,0.056836492415884385,244984.54856838429
+matched_pair,1419,323,0,3.136180533028872e-14,3.774758283725532e-15,0.05588439820948489,264327.6548884136

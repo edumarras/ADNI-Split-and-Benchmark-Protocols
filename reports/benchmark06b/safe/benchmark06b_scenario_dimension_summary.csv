@@ -1,0 +1,4 @@
+scenario,train_rows,validation_rows,train_participants,validation_participants,original_model_features,encoded_columns_before_variance,encoded_columns_final,train_nnz,validation_nnz,train_density,validation_density
+snapshot_all,6707,1445,1987,426,220,667,660,1929326,414375,0.43584631163280335,0.4344919786096257
+snapshot_matched_last,1419,299,1419,299,219,663,656,358735,74779,0.38537853005379946,0.3812454115343829
+longitudinal_previous_last,1419,299,1419,299,427,1260,1248,713490,149433,0.402894102022009,0.4004614741445845

@@ -1,0 +1,16 @@
+scenario,feature_type,original_model_feature_count
+snapshot_all,binary,71
+snapshot_all,categorical,60
+snapshot_all,multi_response,4
+snapshot_all,numeric,77
+snapshot_all,presence,8
+snapshot_matched_last,binary,71
+snapshot_matched_last,categorical,60
+snapshot_matched_last,multi_response,4
+snapshot_matched_last,numeric,76
+snapshot_matched_last,presence,8
+longitudinal_previous_last,binary,142
+longitudinal_previous_last,categorical,111
+longitudinal_previous_last,multi_response,8
+longitudinal_previous_last,numeric,152
+longitudinal_previous_last,presence,14

@@ -1,0 +1,7 @@
+scenario,unknown_kind,features_with_unknown,unknown_occurrences,rows_with_unknown
+snapshot_all,categorical_value,1,1,
+snapshot_all,multi_response_token,0,0,0.0
+snapshot_matched_last,categorical_value,2,3,
+snapshot_matched_last,multi_response_token,0,0,0.0
+longitudinal_previous_last,categorical_value,12,14,
+longitudinal_previous_last,multi_response_token,0,0,0.0

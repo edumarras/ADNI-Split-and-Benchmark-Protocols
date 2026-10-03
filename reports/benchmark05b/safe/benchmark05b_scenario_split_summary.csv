@@ -1,0 +1,7 @@
+scenario,split,rows,participants,one_row_per_participant,current_target_visits,previous_visits,test_rows_used
+snapshot_all,train,6707,1987,False,6707,0,0
+snapshot_all,validation,1445,426,False,1445,0,0
+snapshot_matched_last,train,1419,1419,True,1419,0,0
+snapshot_matched_last,validation,299,299,True,299,0,0
+longitudinal_previous_last,train,1419,1419,True,1419,1419,0
+longitudinal_previous_last,validation,299,299,True,299,299,0

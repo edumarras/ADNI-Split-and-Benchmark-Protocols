@@ -1,0 +1,3 @@
+target_group,variance_threshold,svd_solver,pca90_components,cumulative_explained_variance,cumulative_before_last_component,first_component_explained_variance_ratio,last_retained_component_explained_variance_ratio
+snapshot_all,0.9,full,116,0.9003264719452745,0.8988563151511015,0.2297097869702174,0.0014701567941729132
+matched_pair,0.9,full,109,0.9004248702868054,0.8989011702547769,0.2345792986686326,0.0015237000320284806

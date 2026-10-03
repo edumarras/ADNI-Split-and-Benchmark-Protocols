@@ -1,0 +1,412 @@
+{
+  "stage": "benchmark08b",
+  "script_version": "0.1.0",
+  "model_policy_version": "1.0.0",
+  "upstream_decision_ids": {
+    "preprocessing_decision_id": "1e11cdf3422c59189584",
+    "target_decision_id": "a35b0846c0755c3196ff",
+    "scenario_decision_id": "f7cf7c5b0378b097013a",
+    "temporal_policy_decision_id": "90fefe5ec34d49743612"
+  },
+  "models": [
+    "mean",
+    "median",
+    "ridge",
+    "multitask_elastic_net",
+    "pls",
+    "extra_trees",
+    "knn"
+  ],
+  "scenarios": [
+    "snapshot_all",
+    "snapshot_matched_last",
+    "longitudinal_previous_last"
+  ],
+  "target_representations": [
+    "full",
+    "pca90"
+  ],
+  "selection_metric": "participant_macro_rmse",
+  "selection_tie_breakers": [
+    "participant_macro_mae",
+    "configuration_order"
+  ],
+  "metric_space": "standardized reconstructed Full 323-dimensional target",
+  "grid": {
+    "mean": [
+      {}
+    ],
+    "median": [
+      {}
+    ],
+    "ridge": [
+      {
+        "alpha": 100.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 300.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 1000.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 3000.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 10000.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 30000.0,
+        "solver": "lsqr"
+      },
+      {
+        "alpha": 100000.0,
+        "solver": "lsqr"
+      }
+    ],
+    "multitask_elastic_net": [
+      {
+        "alpha_fraction": 0.3,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.1,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.03,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.01,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.003,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.001,
+        "l1_ratio": 0.1,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.3,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.1,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.03,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.01,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.003,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.001,
+        "l1_ratio": 0.5,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.3,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.1,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.03,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.01,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.003,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      },
+      {
+        "alpha_fraction": 0.001,
+        "l1_ratio": 0.9,
+        "selection": "cyclic",
+        "max_iter": 5000,
+        "tol": 0.0001
+      }
+    ],
+    "pls": [
+      {
+        "n_components": 2,
+        "scale": false,
+        "max_iter": 500,
+        "tol": 1e-06
+      },
+      {
+        "n_components": 5,
+        "scale": false,
+        "max_iter": 500,
+        "tol": 1e-06
+      },
+      {
+        "n_components": 10,
+        "scale": false,
+        "max_iter": 500,
+        "tol": 1e-06
+      },
+      {
+        "n_components": 20,
+        "scale": false,
+        "max_iter": 500,
+        "tol": 1e-06
+      },
+      {
+        "n_components": 40,
+        "scale": false,
+        "max_iter": 500,
+        "tol": 1e-06
+      }
+    ],
+    "extra_trees": [
+      {
+        "n_estimators": 120,
+        "max_depth": 14,
+        "max_features": 0.4,
+        "min_samples_leaf": 3,
+        "seeds": [
+          2026002,
+          2026003,
+          2026004,
+          2026005,
+          2026006
+        ],
+        "criterion": "squared_error"
+      },
+      {
+        "n_estimators": 150,
+        "max_depth": 18,
+        "max_features": 0.6,
+        "min_samples_leaf": 2,
+        "seeds": [
+          2026002,
+          2026003,
+          2026004,
+          2026005,
+          2026006
+        ],
+        "criterion": "squared_error"
+      },
+      {
+        "n_estimators": 120,
+        "max_depth": 16,
+        "max_features": "sqrt",
+        "min_samples_leaf": 3,
+        "seeds": [
+          2026002,
+          2026003,
+          2026004,
+          2026005,
+          2026006
+        ],
+        "criterion": "squared_error"
+      }
+    ],
+    "knn": [
+      {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 10,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 10,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 20,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 20,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 40,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 40,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 80,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 80,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 120,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 120,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 160,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 160,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 240,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 240,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 320,
+        "weights": "uniform",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      },
+      {
+        "n_neighbors": 320,
+        "weights": "distance",
+        "p": 2,
+        "metric": "minkowski",
+        "algorithm": "brute"
+      }
+    ]
+  },
+  "extra_trees_selection": "choose hyperparameter configuration by validation metrics of the mean prediction across five fixed-seed estimators; also report seed stability",
+  "pca_evaluation": "inverse PCA before every validation metric",
+  "automatic_boundary_expansion": false,
+  "knn_note": "The neighborhood grid already includes the previously predeclared upper-bound extension from 80 through 320. No further adaptive extension.",
+  "test": "closed; not read, transformed, materialized or evaluated",
+  "bootstrap": "deferred to the final locked test evaluation",
+  "model_grid_decision_id": "f2fe96bf18b9d1e717b6"
+}
